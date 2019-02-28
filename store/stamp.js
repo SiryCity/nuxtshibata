@@ -1,13 +1,13 @@
-
-
-export const state = {
+export const state = () =>
+({
   pts: 0
-}
+})
 
 /*
-export const getters = {
+export const getters = () =>
+({
   sizeOfStamp: state => 70 + state.percentForSizeOfStamp / 10
-}
+})
 */
 
 export const mutations = {

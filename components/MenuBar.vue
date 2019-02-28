@@ -2,14 +2,16 @@
 <template lang="pug">
    nav#menubar
      div#menubar__wrapper
-       div aaa
+       div test
 </template>
 
 <style lang="stylus" scoped>
 #menubar
-  width 100vw
+  width 100%
   height 60px
   background-color rgb(0, 23, 90)
+  position fixed
+  bottom 0
   display flex
   justify-content center
 #menubar__wrapper
@@ -19,10 +21,7 @@
   display flex
   align-items center
   justify-content space-between
-
 #wrapper__logo
   width auto
   height 40px
-
-
 </style>

@@ -1,6 +1,7 @@
 <template lang="pug">
-  v-app#root
-    nuxt
+  div#root
+    main#main
+      nuxt
     menu-bar
 </template>
 
@@ -41,23 +42,13 @@ body
   display flex
   flex-direction column
   align-items center
-
-.pages
+  position relative
+#main
   width 100%
-  height calc(var(--static100vh) - 60px)
+  height var(--static100vh, 100vh)
   background-color #ddd
   display flex
   justify-content center
   overflow scroll
-
-.pages__wrapper
-  width 100%
-  height 100%
-  display flex
-  flex-direction column
-  justify-content flex-start
-  align-items center
-  overflow scroll
-  
 </style>
 

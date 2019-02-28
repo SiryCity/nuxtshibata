@@ -1,8 +1,6 @@
 <template lang="pug">
-  div.pages
-    div.pages__wrapper
-      section.stamparea__wrapper
-        div.stamparea(@touchstart='startToStamp') {{$store.state.stamp.pts}}
+  section.stamparea__wrapper
+    div.stamparea(@touchstart='startToStamp') {{$store.state.stamp.pts}}
       
 </template>
 
@@ -10,9 +8,7 @@
 
 export default {
   methods:{
-    startToStamp(e){
-      this.$store.dispatch('stamp/startToStamp', e)
-    }
+    startToStamp(e){this.$store.dispatch('stamp/startToStamp', e)}
   }
 }
 

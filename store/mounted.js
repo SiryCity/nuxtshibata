@@ -8,7 +8,8 @@ export const actions = {
   //画面1個分の高さをセットする
   setStatic100vh({commit, getters}){
     commit('setStatic100vh', getters.isSP)
-  }
+  },
+
 }
 
 export const mutations = {
@@ -19,6 +20,6 @@ export const mutations = {
       isSP ? window.outerHeight + 'px' : '100vh'
     )
   },
-  
+
 }
 
