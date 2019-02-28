@@ -32,6 +32,7 @@ export const actions = {
       })
     )
 
+    alert(`You may push ${coordsOfStamp}`)
 
     // 実際に押されたエリア
     const touchedArea = coordsOfStamp.reduce((pre, cur) =>
