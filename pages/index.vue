@@ -1,6 +1,6 @@
 <template lang="pug">
   section.stamparea__wrapper
-    div.stamparea(@touchstart='startToStamp' @touchend='startToStamp') {{$store.state.stamp.test}}
+    div.stamparea(@touchstart='startToStamp' @touchend='startToStamp') {{$store.state.stamp.pts}}
       
 
 </template>

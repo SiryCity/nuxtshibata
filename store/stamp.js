@@ -23,7 +23,7 @@ export const actions = {
   startToStamp({commit, rootGetters}, e){
 
     const CELLS_OF_POINT_FOR_ONE_SIDE = 6
-    const POINTS_OF_STAMP = 5
+    const POINTS_OF_STAMP = 4
 
     if(e.touches.length !== POINTS_OF_STAMP) return
 
@@ -84,6 +84,7 @@ export const actions = {
 
     if(!gainedPts) return
 
+    alert(`success!!!`)
     commit('changePts', gainedPts.pts)
   }
 }
