@@ -20,37 +20,18 @@ export const actions = {
   startToStamp({commit, rootGetters}, e){
 
     const CELLS_OF_POINT_FOR_ONE_SIDE = 6
-    //const POINTS_OF_STAMP = 5
+    const POINTS_OF_STAMP = 5
 
-    //if(e.touches.length !== POINTS_OF_STAMP) return
+    if(e.touches.length !== POINTS_OF_STAMP) return
 
     // 押された座標
-    const coordsOfStamp1 = [... e.touches].map(e =>
+    const coordsOfStamp = [... e.touches].map(e =>
       ({
         x: e.pageX,
         y: e.pageY
       })
     )
 
-    const coordsOfStamp = [
-      {
-        x: 60,
-        y: 200,
-      },
-      {
-        x: 320,
-        y: 460,
-      },
-      {
-        x: 100,
-        y: 200,
-      },
-      {
-        x: 200,
-        y: 300,
-      },
-      ... coordsOfStamp1
-    ]
 
     // 実際に押されたエリア
     const touchedArea = coordsOfStamp.reduce((pre, cur) =>
