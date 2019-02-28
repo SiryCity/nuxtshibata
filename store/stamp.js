@@ -1,6 +1,7 @@
 export const state = () =>
 ({
   pts: 0,
+  test: 0
 })
 
 /*
@@ -14,6 +15,7 @@ export const mutations = {
   changePts(state, pts){
     state.pts += pts
   },
+  test(state, e){ state.test = e}
 }
 
 export const actions = {
@@ -23,6 +25,7 @@ export const actions = {
     const POINTS_OF_STAMP = 4
 
     //if(e.touches.length !== POINTS_OF_STAMP) return
+    if(e.touches.length <= 1) return
 
     // 押された座標
     const coordsOfStamp = [... e.touches].map(e =>
@@ -73,8 +76,7 @@ export const actions = {
     // 文字型のバイナリに変換
     const binaryOfStamp = arePushed.reduce((pre, cur) => pre + (cur ? '1' : '0'), '')
 
-
-    alert(binaryOfStamp)
+    commit('test', binaryOfStamp)
 
     const gainedPts = rootGetters['buildings/buildings'].find(v =>
       v.binary === + binaryOfStamp
