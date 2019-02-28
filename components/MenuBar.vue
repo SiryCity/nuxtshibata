@@ -9,7 +9,7 @@
 #menubar
   width 100%
   height 60px
-  background-color rgb(0, 23, 90)
+  background-color pink
   position fixed
   bottom 0
   display flex
