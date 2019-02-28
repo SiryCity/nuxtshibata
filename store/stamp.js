@@ -1,6 +1,7 @@
 export const state = () =>
 ({
-  pts: 0
+  pts: 0,
+  test: 0
 })
 
 /*
@@ -13,7 +14,9 @@ export const getters = () =>
 export const mutations = {
   changePts(state, pts){
     state.pts += pts
-  }
+  },
+  test(state, n){ state.test = n}
+
 }
 
 export const actions = {
@@ -22,7 +25,11 @@ export const actions = {
     const CELLS_OF_POINT_FOR_ONE_SIDE = 6
     const POINTS_OF_STAMP = 5
 
-    if(e.touches.length !== POINTS_OF_STAMP) return
+    commit('test', e.touches.length)
+    return
+    //if(e.touches.length !== POINTS_OF_STAMP) return
+    
+
 
     // 押された座標
     const coordsOfStamp = [... e.touches].map(e =>
@@ -32,7 +39,6 @@ export const actions = {
       })
     )
 
-    alert(`You may push ${coordsOfStamp}`)
 
     // 実際に押されたエリア
     const touchedArea = coordsOfStamp.reduce((pre, cur) =>
