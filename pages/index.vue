@@ -1,6 +1,6 @@
 <template lang="pug">
   section.stamparea__wrapper
-    div.stamparea(@touchstart='startToStamp' @touchend='startToStamp') {{$store.state.stamp.test}}
+    div.stamparea(@touchstart='startToStamp' @touchend='startToStamp') {{$store.state.stamp.pts}}
       
 
 </template>
@@ -29,7 +29,7 @@ export default {
   line-height 80vmin
   background-color #bbb
   text-align center
-  font-size 100%
+  font-size 200%
 </style>
 
 
