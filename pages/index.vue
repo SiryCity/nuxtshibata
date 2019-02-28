@@ -2,6 +2,7 @@
   section.stamparea__wrapper
     div.stamparea(@touchstart='startToStamp') {{$store.state.stamp.pts}}
       
+      
 </template>
 
 <script>
