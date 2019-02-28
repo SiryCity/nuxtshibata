@@ -25,12 +25,7 @@ export const actions = {
     const CELLS_OF_POINT_FOR_ONE_SIDE = 6
     const POINTS_OF_STAMP = 5
 
-    commit('test', e.touches.length)
-
     if(e.touches.length !== POINTS_OF_STAMP) return
-    
-    return
-
 
     // 押された座標
     const coordsOfStamp = [... e.touches].map(e =>
