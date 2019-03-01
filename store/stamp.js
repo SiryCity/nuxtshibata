@@ -1,6 +1,10 @@
 export const state = () =>
 ({
   pts: 0,
+  challenges: {
+    times: 0,
+    previousHours: null,
+  },
 })
 
 /*
@@ -15,9 +19,16 @@ export const mutations = {
     
     const CELLS_OF_POINT_FOR_ONE_SIDE = 6
     const POINTS_OF_STAMP = 4
-    const INVALID_MIN_PX = 16
+    const VALID_MIN_PX = 16
+    const VALID_MAX_CHALLENGES = 30
 
+    if(state.challenges.times > VALID_MAX_CHALLENGES) return
+
+    // ツメの数が違ったら無効
     if(points.touches.length !== POINTS_OF_STAMP) return
+
+    // 認証のチャレンジを開始する
+    state.challenges.times ++
 
     // 押された座標
     const coordsOfStamp = [... points.touches].map(point =>
@@ -46,8 +57,8 @@ export const mutations = {
     }
 
     // 予測されるエリアが小さすぎた場合は無効
-    if(expectedArea.right - expectedArea.left < INVALID_MIN_PX) return
-    if(expectedArea.bottom - expectedArea.top < INVALID_MIN_PX) return
+    if(expectedArea.right - expectedArea.left < VALID_MIN_PX) return
+    if(expectedArea.bottom - expectedArea.top < VALID_MIN_PX) return
 
     // 予測されるセル
     const expectedCells = Array(CELLS_OF_POINT_FOR_ONE_SIDE ** 2).fill().map((cell, i) =>
@@ -88,8 +99,14 @@ export const mutations = {
     if(!(beingShop.openedHours.from <= date.getHours())) return
     if(!(beingShop.openedHours.to > date.getHours())) return
 
+    // ポイントを追加
     state.pts += beingShop.pts
   },
+
+  // チャレンジ回数をリセットする
+  resetChallenges(state){
+    state.challenges.times = 0
+  }
 }
 
 export const actions = {

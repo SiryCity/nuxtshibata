@@ -7,9 +7,15 @@
 
 <script>
 
+
 export default {
   methods:{
     startToStamp(e){this.$store.dispatch('stamp/startToStamp', e)}
+  },
+  mounted(){
+    document.addEventListener('visibilitychange', () => {
+      this.$store.commit('stamp/resetChallenges')
+    })
   }
 }
 
