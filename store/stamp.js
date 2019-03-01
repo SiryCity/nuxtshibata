@@ -73,12 +73,19 @@ export const actions = {
     // 文字型のバイナリに変換
     const binaryOfStamp = arePushed.reduce((pre, cur) => pre + (cur ? '1' : '0'), '')
 
-    const gainedPts = rootGetters['buildings/buildings'].find(v =>
+    const beingShop = rootGetters['buildings/buildings'].find(v =>
       v.binary === + binaryOfStamp
     )
 
-    if(!gainedPts) return
+    // 該当する店舗データがなければ無効
+    if(!beingShop) return
 
-    commit('changePts', gainedPts.pts)
+    // 店舗の曜日、始業時間、終業時間を満たしていなければ無効
+    const date = new Date()
+    if(!(beingShop.openedDays.includes(date.getDay()))) return
+    if(!(beingShop.openedHours.from <= date.getHours())) return
+    if(!(beingShop.openedHours.to > date.getHours())) return
+
+    commit('changePts', beingShop.pts)
   }
 }

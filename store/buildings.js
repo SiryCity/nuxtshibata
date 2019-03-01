@@ -56,6 +56,8 @@ export const getters = {
         lat: 35.0741,
         long: 136.9111,
         binary: 100001000000000000000000000000100001,
+        openedDays: [0,1,2,3,4,5,6],
+        openedHours: {from: 0, to: 24},
         pts: -10,
       },
       {
