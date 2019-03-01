@@ -1,6 +1,6 @@
 <template lang="pug">
   section.stamparea__wrapper
-    div.stamparea(@touchstart='startToStamp' @touchend='startToStamp') {{$store.state.stamp.pts}}
+    div.stamparea(@touchstart='pressTheStamp' @touchend='pressTheStamp') {{$store.state.stamp.pts}}
       
 
 </template>
@@ -10,7 +10,7 @@
 
 export default {
   methods:{
-    startToStamp(e){this.$store.dispatch('stamp/startToStamp', e)}
+    pressTheStamp(e){this.$store.dispatch('stamp/pressTheStamp', e)}
   },
   mounted(){
     document.addEventListener('visibilitychange', () => {
