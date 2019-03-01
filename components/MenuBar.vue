@@ -9,7 +9,7 @@
 #menubar
   width 100%
   height 60px
-  background-color cyan
+  background-color blue
   position fixed
   bottom 0
   display flex

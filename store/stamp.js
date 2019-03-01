@@ -20,10 +20,10 @@ export const mutations = {
     if(points.touches.length !== POINTS_OF_STAMP) return
 
     // 押された座標
-    const coordsOfStamp = [... points.touches].map(e =>
+    const coordsOfStamp = [... points.touches].map(point =>
       ({
-        x: points.pageX,
-        y: points.pageY
+        x: point.pageX,
+        y: point.pageY
       })
     )
 
