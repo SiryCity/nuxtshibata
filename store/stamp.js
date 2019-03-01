@@ -11,24 +11,19 @@ export const getters = () =>
 */
 
 export const mutations = {
-  changePts(state, pts){
-    state.pts += pts
-  },
-}
-
-export const actions = {
-  startToStamp({commit, rootGetters}, e){
-
+  changePts(state, {points, shops}){
+    
     const CELLS_OF_POINT_FOR_ONE_SIDE = 6
     const POINTS_OF_STAMP = 4
+    const INVALID_MIN_PX = 16
 
-    if(e.touches.length !== POINTS_OF_STAMP) return
+    if(points.touches.length !== POINTS_OF_STAMP) return
 
     // 押された座標
-    const coordsOfStamp = [... e.touches].map(e =>
+    const coordsOfStamp = [... points.touches].map(e =>
       ({
-        x: e.pageX,
-        y: e.pageY
+        x: points.pageX,
+        y: points.pageY
       })
     )
 
@@ -49,6 +44,10 @@ export const actions = {
       top: touchedArea.top - ((touchedArea.bottom - touchedArea.top) / ((CELLS_OF_POINT_FOR_ONE_SIDE - 1) * 2)),
       bottom: touchedArea.bottom + ((touchedArea.bottom - touchedArea.top) / ((CELLS_OF_POINT_FOR_ONE_SIDE - 1) * 2)),
     }
+
+    // 予測されるエリアが小さすぎた場合は無効
+    if(expectedArea.right - expectedArea.left < INVALID_MIN_PX) return
+    if(expectedArea.bottom - expectedArea.top < INVALID_MIN_PX) return
 
     // 予測されるセル
     const expectedCells = Array(CELLS_OF_POINT_FOR_ONE_SIDE ** 2).fill().map((cell, i) =>
@@ -71,9 +70,12 @@ export const actions = {
     )
 
     // 文字型のバイナリに変換
-    const binaryOfStamp = arePushed.reduce((pre, cur) => pre + (cur ? '1' : '0'), '')
+    const binaryOfStamp = arePushed.reduce((pre, cur) =>
+      pre + (cur ? '1' : '0')
+    ,'')
 
-    const beingShop = rootGetters['buildings/buildings'].find(v =>
+    // バイナリを元に現在いる店を特定
+    const beingShop = shops.find(v =>
       v.binary === + binaryOfStamp
     )
 
@@ -86,6 +88,12 @@ export const actions = {
     if(!(beingShop.openedHours.from <= date.getHours())) return
     if(!(beingShop.openedHours.to > date.getHours())) return
 
-    commit('changePts', beingShop.pts)
+    state.pts += beingShop.pts
+  },
+}
+
+export const actions = {
+  startToStamp({commit, rootGetters}, points){
+    commit('changePts', {points, shops: rootGetters['buildings/buildings']})
   }
 }

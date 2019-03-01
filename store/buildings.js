@@ -70,6 +70,8 @@ export const getters = {
         lat: 35.0751,
         long: 136.9109,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -82,6 +84,8 @@ export const getters = {
         lat: 35.0794,
         long: 136.9063,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -94,6 +98,8 @@ export const getters = {
         lat: 35.0758,
         long: 136.9049,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -106,6 +112,8 @@ export const getters = {
         lat: 35.0754,
         long: 136.9062,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -118,6 +126,8 @@ export const getters = {
         lat: 35.0739,
         long: 136.9070,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -130,6 +140,8 @@ export const getters = {
         lat: 35.0729,
         long: 136.9106,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -142,6 +154,8 @@ export const getters = {
         lat: 35.0719,
         long: 136.9104,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -154,6 +168,8 @@ export const getters = {
         lat: 35.0731,
         long: 136.9147,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -166,6 +182,8 @@ export const getters = {
         lat: 35.0729,
         long: 136.9173,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -178,6 +196,8 @@ export const getters = {
         lat: 35.0713,
         long: 136.9180,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
 
@@ -193,6 +213,8 @@ export const getters = {
         lat: 35.0743,
         long: 136.9112,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -205,6 +227,8 @@ export const getters = {
         lat: 35.0739,
         long: 136.9116,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -217,6 +241,8 @@ export const getters = {
         lat: 35.0739,
         long: 136.9119,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -229,6 +255,8 @@ export const getters = {
         lat: 35.0769,
         long: 136.9116,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -241,6 +269,8 @@ export const getters = {
         lat: 35.0744,
         long: 136.9099,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -253,6 +283,8 @@ export const getters = {
         lat: 35.0740,
         long: 136.9104,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -265,6 +297,8 @@ export const getters = {
         lat: 35.0735,
         long: 136.9103,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -277,6 +311,8 @@ export const getters = {
         lat: 35.0727,
         long: 136.9102,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
 
@@ -292,6 +328,8 @@ export const getters = {
         lat: 35.0729,
         long: 136.9128,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -304,6 +342,8 @@ export const getters = {
         lat: 35.0727,
         long: 136.9115,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -316,6 +356,8 @@ export const getters = {
         lat: 35.0739,
         long: 136.9110,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -326,8 +368,9 @@ export const getters = {
         src: src30,
         author: '水谷竜斗 (大同大学)',
         lat: 35.0746,
-        long: 136.9111,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -340,6 +383,8 @@ export const getters = {
         lat: 35.0765,
         long: 136.9107,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -352,6 +397,8 @@ export const getters = {
         lat: 35.0749,
         long: 136.9105,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -364,6 +411,8 @@ export const getters = {
         lat: 35.0733,
         long: 136.9097,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -376,6 +425,8 @@ export const getters = {
         lat: 35.0736,
         long: 136.9098,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -388,6 +439,8 @@ export const getters = {
         lat: 35.0728,
         long: 136.9097,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -400,6 +453,8 @@ export const getters = {
         lat: 35.0722,
         long: 136.9095,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -412,6 +467,8 @@ export const getters = {
         lat: 35.0722,
         long: 136.9098,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
       {
@@ -424,6 +481,8 @@ export const getters = {
         lat: 35.0722,
         long: 136.9101,
         binary: null,
+        openedDays: [],
+        openedHours: {from: 0, to: 0},
         pts: null,
       },
     ]
