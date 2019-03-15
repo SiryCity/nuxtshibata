@@ -58,7 +58,7 @@ export const getters = {
         binary: 100001000000000000000000000000100001,
         openedDays: [0,1,2,3,4,5,6],
         openedHours: {from: 0, to: 24},
-        pts: -10,
+        pts: 10,
       },
       {
         name: '柴田本通1交差点',

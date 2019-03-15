@@ -1,9 +1,7 @@
 module.exports = {
-
-  modules: [
-    '@nuxtjs/vuetify'
+  css: [
+    'reset-css'
   ],
-
   /*
   ** Headers of the page
   */
@@ -16,9 +14,10 @@ module.exports = {
       { name: "robots", content: "noindex" },
       { name: "robots", content: "nofollow" },
       { name: "robots", content: "noachieve" },
+      
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
     ]
   },
   /*

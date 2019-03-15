@@ -1,41 +1,36 @@
 <template lang="pug">
-  section.stamparea__wrapper
-    div.stamparea(@touchstart='pressTheStamp' @touchend='pressTheStamp') {{$store.state.stamp.pts}}
-      
-
+  div.first-view
+    img(:src='shibata' alt='')
+    h1 柴田アクティブストリート
+    div お買い物でためる
+    nuxt-link(to='stamp') スタンプをおしてもらう
+    nuxt-link(to='stamp') スタンプのたまるお店をさがす
+    div 探検でためる
+    nuxt-link(to='stamp')  QRコードのある場所をさがす
 </template>
 
 <script>
-
+import shibata from '~/assets/shibata_logo_orange.svg'
 
 export default {
-  methods:{
-    pressTheStamp(e){this.$store.dispatch('stamp/pressTheStamp', e)}
-  },
-  mounted(){
-    document.addEventListener('visibilitychange', () => {
-      this.$store.commit('stamp/resetChallenges')
-    })
+  computed:{
+    shibata: () => shibata
   }
 }
-
 </script>
 
+
 <style lang="stylus" scoped>
-.stamparea__wrapper
-  width 100%
-  height 100%
+.first-view
   display flex
   flex-direction column
-  justify-content space-around
-  align-items center
-.stamparea
-  width 80vmin
-  height 80vmin
-  line-height 80vmin
-  background-color #bbb
+  justify-content flex-start
   text-align center
-  font-size 200%
+  font-weight bold
+    
+  img
+    width 256px
+
 </style>
 
 

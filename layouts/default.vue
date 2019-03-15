@@ -15,7 +15,11 @@ export default {
   },
   mounted(){
     this.$store.dispatch('mounted/setStatic100vh')
-  },
+    
+    document.addEventListener('visibilitychange', () => {
+      this.$store.commit('stamp/resetChallenges')
+    })
+  }
 }
 </script>
 
@@ -29,6 +33,8 @@ html
   -moz-osx-font-smoothing grayscale
   -webkit-font-smoothing antialiased
   box-sizing border-box
+  background-color #eee
+  color #222
 *
 *before
 *after
@@ -46,7 +52,6 @@ body
 #main
   width 100%
   height var(--static100vh, 100vh)
-  background-color #ddd
   display flex
   justify-content center
   overflow scroll
