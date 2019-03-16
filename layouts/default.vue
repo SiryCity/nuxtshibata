@@ -24,6 +24,7 @@ export default {
 </script>
 
 <style lang="stylus">
+
 html
   font-family "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
   font-size 16px
@@ -33,8 +34,8 @@ html
   -moz-osx-font-smoothing grayscale
   -webkit-font-smoothing antialiased
   box-sizing border-box
-  background-color #eee
-  color #222
+  background-color var(--color-darkblue)
+  color var(--color-white)
 *
 *before
 *after
@@ -42,18 +43,23 @@ html
   margin 0
 body
   margin 0
-:root
-  --static100vh 100vh
 #root
   display flex
   flex-direction column
   align-items center
   position relative
+:root
+  --static100vh 100vh
+  --color-darkblue #00175A
+  --color-white #eee
+  --color-black #222
+
 #main
   width 100%
   height var(--static100vh, 100vh)
   display flex
   justify-content center
   overflow scroll
+
 </style>
 

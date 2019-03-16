@@ -6,14 +6,14 @@
     nuxt-link(to='stamp') スタンプをおしてもらう
     nuxt-link(to='stamp') スタンプのたまるお店をさがす
     div 探検でためる
-    nuxt-link(to='stamp')  QRコードのある場所をさがす
+    nuxt-link(to='stamp') QRコードのある場所をさがす
 </template>
 
 <script>
 import shibata from '~/assets/shibata_logo_orange.svg'
 
 export default {
-  computed:{
+  computed: {
     shibata: () => shibata
   }
 }
@@ -29,8 +29,17 @@ export default {
   font-weight bold
     
   img
-    width 256px
-
+  h1
+  div
+  a
+    margin 10px 0
+    padding 10px
+  
+  a
+    color var(--color-darkblue)
+    background-color var(--color-white)
+    text-decoration none
+    border-radius 5px
 </style>
 
 
