@@ -8,10 +8,12 @@
 <script>
 
 import MenuBar from '~/components/MenuBar.vue'
+import LeafletArea from '~/components/LeafletArea.vue'
 
 export default {
   components:{
-    MenuBar
+    MenuBar,
+    LeafletArea,
   },
   mounted(){
     this.$store.dispatch('mounted/setStatic100vh')
@@ -57,6 +59,7 @@ body
 #main
   width 100%
   height var(--static100vh, 100vh)
+  position relative
   display flex
   justify-content center
   overflow scroll
