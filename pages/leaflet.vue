@@ -1,6 +1,5 @@
 <template lang="pug">
   div.test
-    leaflet-area
 </template>
 
 <script>

@@ -7,6 +7,13 @@
     nuxt-link(to='leaflet') スタンプのたまるお店をさがす
     div 探検でためる
     nuxt-link(to='leaflet') QRコードのある場所をさがす
+    div 探検でためる
+    div 探検でためる
+    div 探検でためる
+    div 探検でためる
+    div 探検でためる
+    div 探検でためる
+    div 探検でためる
 </template>
 
 
@@ -19,6 +26,7 @@
   justify-content flex-start
   text-align center
   font-weight bold
+  background-color rgba(0,0,0,.6)
     
   img
   h1

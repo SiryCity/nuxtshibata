@@ -1,8 +1,8 @@
 <template lang="pug">
   div#root
-    main#main
-      nuxt
+    leaflet-area
     menu-bar
+    main#contents: nuxt
 </template>
 
 <script>
@@ -46,6 +46,8 @@ html
 body
   margin 0
 #root
+  width 100%
+  height var(--static100vh, 100vh)
   display flex
   flex-direction column
   align-items center
@@ -55,14 +57,15 @@ body
   --color-darkblue #00175A
   --color-white #eee
   --color-black #222
+  --height-menubar 60px
 
-#main
+#contents
   width 100%
-  height var(--static100vh, 100vh)
-  position relative
-  display flex
-  justify-content center
+  height calc(var(--static100vh, 100vh) - var(--height-menubar))
+  position absolute
+  top 0
+  left 0
+  right 0
   overflow scroll
-
 </style>
 
