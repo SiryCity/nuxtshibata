@@ -1,6 +1,13 @@
 module.exports = {
   css: [
-    'reset-css'
+    'reset-css',
+    "leaflet/dist/leaflet.css"
+  ],
+  plugins: [
+    {
+      src: "~/plugins/leaflet",
+      ssr: false
+    }
   ],
   /*
   ** Headers of the page

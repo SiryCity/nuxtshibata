@@ -1,23 +1,15 @@
 <template lang="pug">
   div.first-view
-    img(:src='shibata' alt='')
+    img(src='~/assets/shibata_logo_white.svg' alt='')
     h1 柴田アクティブストリート
     div お買い物でためる
     nuxt-link(to='stamp') スタンプをおしてもらう
-    nuxt-link(to='stamp') スタンプのたまるお店をさがす
+    nuxt-link(to='leaflet') スタンプのたまるお店をさがす
     div 探検でためる
-    nuxt-link(to='stamp') QRコードのある場所をさがす
+    nuxt-link(to='leaflet') QRコードのある場所をさがす
 </template>
 
-<script>
-import shibata from '~/assets/shibata_logo_orange.svg'
 
-export default {
-  computed: {
-    shibata: () => shibata
-  }
-}
-</script>
 
 
 <style lang="stylus" scoped>
