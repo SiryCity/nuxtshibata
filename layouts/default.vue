@@ -2,7 +2,7 @@
   div#root
     leaflet-area
     menu-bar
-    main#contents: nuxt
+    nuxt
 </template>
 
 <script>
@@ -45,13 +45,6 @@ html
   margin 0
 body
   margin 0
-#root
-  width 100%
-  height var(--static100vh, 100vh)
-  display flex
-  flex-direction column
-  align-items center
-  position relative
 :root
   --static100vh 100vh
   --color-darkblue #00175A
@@ -59,13 +52,21 @@ body
   --color-black #222
   --height-menubar 60px
 
-#contents
+// これやっていいか不明
+body
+#__nuxt
+#__layout
+  position relative
+  z-index -2
+
+#root
   width 100%
-  height calc(var(--static100vh, 100vh) - var(--height-menubar))
-  position absolute
-  top 0
-  left 0
-  right 0
-  overflow scroll
+  height var(--static100vh, 100vh)
+  display flex
+  flex-direction column
+  align-items center
+  position relative
+  z-index -2
+
 </style>
 

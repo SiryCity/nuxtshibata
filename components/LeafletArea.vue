@@ -1,7 +1,7 @@
 <template lang="pug">
-  div.leaf
+  div.leaflet__wrapper
     no-ssr
-      l-map.mini-map(:zoom='13' :center='position')
+      l-map.mini-map(:zoom='15.5' :center='position')
         l-tile-layer(url='http://{s}.tile.osm.org/{z}/{x}/{y}.png')
         l-marker(:lat-lng='position')
 </template>
@@ -9,19 +9,18 @@
 <script>
 export default {
   data: () =>
-  ({
-    position: [55.607741796855734, 13.018133640289308],
-  }),
+    ({
+      position: [35.0742236, 136.910764],
+    }),
 }
 </script>
 
 <style lang="stylus">
-.leaf
+.leaflet__wrapper
   width 100vw
   height calc(var(--static100vh, 100vh) - var(--height-menubar))
   position relative
   z-index -1
-
 .mini-map
   width 100%
   height calc(var(--static100vh, 100vh) - var(--height-menubar))

@@ -1,22 +1,31 @@
 <template lang="pug">
-  div.first-view
-    img(src='~/assets/shibata_logo_white.svg' alt='')
-    h1 柴田アクティブストリート
-    div お買い物でためる
-    nuxt-link(to='stamp') スタンプをおしてもらう
-    nuxt-link(to='leaflet') スタンプのたまるお店をさがす
-    div 探検でためる
-    nuxt-link(to='leaflet') QRコードのある場所をさがす
-    div 探検でためる
-    div 探検でためる
-    div 探検でためる
-    div 探検でためる
-    div 探検でためる
-    div 探検でためる
-    div 探検でためる
+  main-wrapper
+    div.first-view
+      img(src='~/assets/shibata_logo_white.svg' alt='')
+      h1 柴田アクティブストリート
+      div お買い物でためる
+      nuxt-link(to='stamp') スタンプをおしてもらう
+      nuxt-link(to='map') スタンプのたまるお店をさがす
+      div 探検でためる
+      nuxt-link(to='map') QRコードのある場所をさがす
+      div 探検でためる
+      div 探検でためる
+      div 探検でためる
+      div 探検でためる
+      div 探検でためる
+      div 探検でためる
+      div 探検でためる
 </template>
 
 
+<script>
+import MainWrapper from '~/components/MainWrapper.vue'
+export default {
+  components:{
+    MainWrapper
+  }
+}
+</script>
 
 
 <style lang="stylus" scoped>
@@ -26,7 +35,6 @@
   justify-content flex-start
   text-align center
   font-weight bold
-  background-color rgba(0,0,0,.6)
     
   img
   h1

@@ -1,13 +1,16 @@
 <template lang="pug">
+main-wrapper
   section.stamparea__wrapper
     div.stamparea(@touchstart='pressTheStamp' @touchend='pressTheStamp') {{$store.state.stamp.pts}}
 
 </template>
 
 <script>
-
-
+import MainWrapper from '~/components/MainWrapper.vue'
 export default {
+  components:{
+    MainWrapper
+  },
   methods:{
     pressTheStamp(e){this.$store.dispatch('stamp/pressTheStamp', e)}
   },
