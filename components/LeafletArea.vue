@@ -2,7 +2,7 @@
   div.leaflet__wrapper
     no-ssr
       l-map.mini-map(:zoom='15.5' :center='position')
-        l-tile-layer(url='http://{s}.tile.osm.org/{z}/{x}/{y}.png')
+        l-tile-layer(url='http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png')
         l-marker(:lat-lng='position')
 </template>
 
