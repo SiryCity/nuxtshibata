@@ -3,18 +3,22 @@
    nav#menubar__wrapper
      div#menubar
        div
-         nuxt-link(:to='{name: "index"}')
+         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')
          p ホーム
        div
-         nuxt-link(:to='{name: "index"}')
-         p ためる
+         nuxt-link(:to='{name: "stamp"}'): img(src='~/assets/menu-icon-1.svg')
+         p スタンプ
        div
-         nuxt-link(:to='{name: "index"}')
-         p ためる
+         nuxt-link(:to='{name: "map"}'): img(src='~/assets/menu-icon-2.svg')
+         p QRコード
        div
-         nuxt-link(:to='{name: "index"}')
-         p しばた
+         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')
+         p ちず
+       div
+         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')
+         p アプリ
 </template>
+
 
 <style lang="stylus" scoped>
 #menubar__wrapper
@@ -33,17 +37,29 @@
     align-items center
     justify-content space-around
     div
+      width 25%
       height 100%
+      display flex
+      flex-direction column
+      justify-content center
+      align-items center
+
       a
         display block
         width 50px
         height 50px
-        background-color orange
+        background-color var(--color-darkblue)
         color var(--color-white)
         text-decoration none
         border-radius 50%
         margin-top -20px
+        display flex
+        justify-content center
+        align-items center
+        img
+          width 80%
+          height 80%
       p
-        margin-top 5px
+        font-size 14px
 
 </style>
