@@ -4,10 +4,10 @@
       img(src='~/assets/shibata_logo_white.svg' alt='')
       h1 柴田アクティブストリート
       div お買い物でためる
-      nuxt-link(to='stamp') スタンプをおしてもらう
-      nuxt-link(to='map') スタンプのたまるお店をさがす
+      nuxt-link(:to='{name: "stamp"}') スタンプをおしてもらう
+      nuxt-link(:to='{name: "map"}') スタンプのたまるお店をさがす
       div 探検でためる
-      nuxt-link(to='map') QRコードのある場所をさがす
+      nuxt-link(:to='{name: "map"}') QRコードのある場所をさがす
       div 探検でためる
       div 探検でためる
       div 探検でためる
