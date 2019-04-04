@@ -9,10 +9,10 @@
          nuxt-link(:to='{name: "stamp"}'): img(src='~/assets/menu-icon-1.svg')
          p スタンプ
        div
-         nuxt-link(:to='{name: "map"}'): img(src='~/assets/menu-icon-2.svg')
+         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-2.svg')
          p QRコード
        div
-         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')
+         nuxt-link(:to='{name: "map"}'): img(src='~/assets/menu-icon-1.svg')
          p ちず
        div
          nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')

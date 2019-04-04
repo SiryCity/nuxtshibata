@@ -3,7 +3,22 @@
     no-ssr
       l-map.mini-map(:zoom='15.5' :center='position')
         l-tile-layer(url='http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png')
-        l-marker(:lat-lng='position')
+        l-circle(
+          v-for='(building, i) in $store.getters["buildings/buildings"]'
+          :key='`building-${i}`'
+          :lat-lng='[building.lat, building.long]'
+        )
+        l-circle(
+          v-for='(ghost, i) in $store.getters["ghosts/ghosts"]'
+          :key='`ghost-${i}`'
+          :lat-lng='[ghost.lat, ghost.long]'
+        )
+        l-circle(
+          v-for='(danger, i) in $store.getters["dangers/dangers"]'
+          :key='`danger-${i}`'
+          :lat-lng='[danger.lat, danger.long]'
+        )
+        
 </template>
 
 <script>
@@ -25,4 +40,7 @@ export default {
   width 100%
   height calc(var(--static100vh, 100vh) - var(--height-menubar))
 
+.leaflet-interactive
+  background-color orange
+  opacity .5
 </style>

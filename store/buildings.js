@@ -368,6 +368,7 @@ export const getters = {
         src: src30,
         author: '水谷竜斗 (大同大学)',
         lat: 35.0746,
+        long: 136.9110,
         binary: null,
         openedDays: [],
         openedHours: {from: 0, to: 0},
