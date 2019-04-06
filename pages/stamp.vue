@@ -25,7 +25,6 @@ export default {
   background-color #bbb
   text-align center
   font-size 200%
-  margin-top calc((var(--static100vh) - var(--height-menubar)) / 2 - 40vmin)
 </style>
 
 

@@ -1,12 +1,10 @@
 <template lang="pug">
-  div#main__wrapper
-    div
-      slot
+  div.main__wrapper: div.main: slot
 </template>
 
 
 <style lang="stylus" scoped>
-#main__wrapper
+.main__wrapper
   width 100%
   height calc(var(--static100vh, 100vh) - var(--height-menubar))
   position absolute
@@ -19,11 +17,12 @@
   justify-content center
   background-color rgba(0,0,0,.6)
 
-  div
+  div.main
     width 90%
     max-width 540px
     display flex
     flex-direction column
     justify-content flex-start
     align-items center
+    padding-top calc((var(--static100vh) - var(--height-menubar)) / 3)
 </style>

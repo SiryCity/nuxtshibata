@@ -3,10 +3,10 @@
    nav#menubar__wrapper
      div#menubar
        div
-         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')
+         nuxt-link(:to='{name: "index"}'): img(src='~/assets/shibata_logo_white.svg')
          p ホーム
        div
-         nuxt-link(:to='{name: "map"}'): img(src='~/assets/menu-icon-1.svg')
+         nuxt-link(:to='{name: "map"}'): img(src='~/assets/menu-icon-map.svg')
          p ちず
        div
          nuxt-link(:to='{name: "stamp"}'): img(src='~/assets/menu-icon-stamp.svg')
@@ -15,7 +15,7 @@
          nuxt-link(:to='{name: "qr"}'): img(src='~/assets/menu-icon-qr.svg')
          p QRコード
        div
-         nuxt-link(:to='{name: "about"}'): img(src='~/assets/menu-icon-1.svg')
+         nuxt-link(:to='{name: "about"}'): img(src='~/assets/shibata_logo_white.svg')
          p せいさく
 </template>
 
@@ -57,8 +57,8 @@
         justify-content center
         align-items center
         img
-          width 80%
-          height 80%
+          width 64%
+          height 64%
       p
         font-size 14px
 
