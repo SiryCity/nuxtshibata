@@ -3,26 +3,32 @@
     div.first-view
       img(src='~/assets/shibata_logo_white.svg' alt='')
       h1 柴田アクティブストリート
-      div お買い物でためる
-      nuxt-link(:to='{name: "stamp"}') スタンプをおしてもらう
-      nuxt-link(:to='{name: "map"}') スタンプのたまるお店をさがす
-      div 探検でためる
-      nuxt-link(:to='{name: "map"}') QRコードのある場所をさがす
-      div 探検でためる
-      div {{$store.state.stamp.pts}}
-      div 探検でためる
-      div 探検でためる
-      div 探検でためる
-      div 探検でためる
-      div 探検でためる
+      //-
+        div お買い物でためる
+        nuxt-link(:to='{name: "stamp"}') スタンプをおしてもらう
+        nuxt-link(:to='{name: "map"}') スタンプのたまるお店をさがす
+        div 探検でためる
+        nuxt-link(:to='{name: "map"}') QRコードのある場所をさがす
+        div 探検でためる
+        div {{$store.state.stamp.pts}}
+
+      description-card(
+        v-for='(card, i) in $store.getters["aboutasp/aboutasp"]'
+        :card='card',
+        :key='`description-card-${i}`'
+        :propKey='`description-card-${i}`'
+      )
+
 </template>
 
 
 <script>
 import MainWrapper from '~/components/MainWrapper.vue'
+import DescriptionCard from '~/components/DescriptionCard.vue'
 export default {
   components:{
-    MainWrapper
+    MainWrapper,
+    DescriptionCard,
   }
 }
 </script>
@@ -35,13 +41,6 @@ export default {
   justify-content flex-start
   text-align center
   font-weight bold
-    
-  img
-  h1
-  div
-  a
-    margin 10px 0
-    padding 10px
   
   a
     color var(--color-darkblue)

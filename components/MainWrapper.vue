@@ -25,4 +25,5 @@
     justify-content flex-start
     align-items center
     padding-top calc((var(--static100vh) - var(--height-menubar)) / 3)
+    padding-bottom calc((var(--static100vh) - var(--height-menubar)) / 3)
 </style>

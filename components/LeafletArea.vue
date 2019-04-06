@@ -1,7 +1,7 @@
 <template lang="pug">
   div.leaflet__wrapper
     no-ssr
-      l-map.mini-map(:zoom='15.5' :center='position')
+      l-map.mini-map(:zoom='16' :center='[35.0742236, 136.910764]')
         l-tile-layer(url='http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png')
         l-circle(
           v-for='(building, i) in $store.getters["buildings/buildings"]'
@@ -21,14 +21,6 @@
         
 </template>
 
-<script>
-export default {
-  data: () =>
-    ({
-      position: [35.0742236, 136.910764],
-    }),
-}
-</script>
 
 <style lang="stylus">
 .leaflet__wrapper
@@ -41,6 +33,9 @@ export default {
   height calc(var(--static100vh, 100vh) - var(--height-menubar))
 
 .leaflet-interactive
-  background-color orange
-  opacity .5
+  stroke #333
+  stroke-width 2px
+  fill orange
+  fill-opacity 1
+  background-color unset
 </style>
