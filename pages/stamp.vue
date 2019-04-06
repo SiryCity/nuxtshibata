@@ -1,7 +1,6 @@
 <template lang="pug">
 main-wrapper
-  section.stamparea__wrapper
-    div.stamparea(@touchstart='pressTheStamp' @touchend='pressTheStamp') {{$store.state.stamp.pts}}
+  div.stamparea(@touchstart='pressTheStamp' @touchend='pressTheStamp') {{$store.state.stamp.pts}}
 
 </template>
 
@@ -19,13 +18,6 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.stamparea__wrapper
-  width 100%
-  height 100%
-  display flex
-  flex-direction column
-  justify-content space-around
-  align-items center
 .stamparea
   width 80vmin
   height 80vmin
@@ -33,6 +25,7 @@ export default {
   background-color #bbb
   text-align center
   font-size 200%
+  margin-top calc((var(--static100vh) - var(--height-menubar)) / 2 - 40vmin)
 </style>
 
 

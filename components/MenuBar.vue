@@ -6,17 +6,17 @@
          nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')
          p ホーム
        div
-         nuxt-link(:to='{name: "stamp"}'): img(src='~/assets/menu-icon-1.svg')
-         p スタンプ
-       div
-         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-2.svg')
-         p QRコード
-       div
          nuxt-link(:to='{name: "map"}'): img(src='~/assets/menu-icon-1.svg')
          p ちず
        div
-         nuxt-link(:to='{name: "index"}'): img(src='~/assets/menu-icon-1.svg')
-         p アプリ
+         nuxt-link(:to='{name: "stamp"}'): img(src='~/assets/menu-icon-stamp.svg')
+         p スタンプ
+       div
+         nuxt-link(:to='{name: "qr"}'): img(src='~/assets/menu-icon-qr.svg')
+         p QRコード
+       div
+         nuxt-link(:to='{name: "about"}'): img(src='~/assets/menu-icon-1.svg')
+         p せいさく
 </template>
 
 

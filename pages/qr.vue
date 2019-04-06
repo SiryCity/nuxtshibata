@@ -1,5 +1,5 @@
 <template lang="pug">
-  main-wrapper test
+  main-wrapper qr
 </template>
 
 <script>
@@ -11,5 +11,7 @@ export default {
 }
 </script>
 
+<style lang="stylus" scoped>
+</style>
 
 

@@ -9,7 +9,7 @@
       div 探検でためる
       nuxt-link(:to='{name: "map"}') QRコードのある場所をさがす
       div 探検でためる
-      div 探検でためる
+      div {{$store.state.stamp.pts}}
       div 探検でためる
       div 探検でためる
       div 探検でためる
