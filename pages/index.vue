@@ -10,7 +10,10 @@
         div 探検でためる
         nuxt-link(:to='{name: "map"}') QRコードのある場所をさがす
         div 探検でためる
-        div {{$store.state.stamp.pts}}
+      div.current-points
+        | 現在
+        span {{$store.state.stamp.pts}}
+        | ポイント
 
       description-card(
         v-for='(card, i) in $store.getters["aboutasp/aboutasp"]'
@@ -47,6 +50,13 @@ export default {
     background-color var(--color-white)
     text-decoration none
     border-radius 5px
+
+.current-points
+  margin 60px 0 20px
+  span
+    font-size 300%
+    font-weight normal
+    margin 0 5px
 </style>
 
 

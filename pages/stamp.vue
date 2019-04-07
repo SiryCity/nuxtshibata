@@ -1,6 +1,6 @@
 <template lang="pug">
 main-wrapper
-  div.stamparea(@touchstart='pressTheStamp' @touchend='pressTheStamp') {{$store.state.stamp.pts}}
+  div.stamparea(@touchstart='pressTheStamp' @touchend='pressTheStamp') ここにスタンプをおす
 
 </template>
 
@@ -22,9 +22,17 @@ export default {
   width 80vmin
   height 80vmin
   line-height 80vmin
-  background-color #bbb
   text-align center
-  font-size 200%
+  font-size 120%
+  letter-spacing 3px
+  font-weight bold
+  border #111 solid 7px
+  box-sizing border-box
+  background linear-gradient(63deg, #444 23%, transparent 23%) 7px 0,
+    linear-gradient(63deg, transparent 74%, #444 78%),
+    linear-gradient(63deg, transparent 34%, #444 38%, #444 58%, transparent 62%),
+    #111
+  background-size 16px 48px
 </style>
 
 

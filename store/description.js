@@ -4,15 +4,23 @@ export const state = () =>
     isOpen: false
   })
 
-export const mutations = {
-  enterDescription(state, description){
-    state.chosendDescription = description
-    state.isOpen = true
+export const actions = {
+  leaveDescription: async({commit}) => {
+    commit('leaveWindow')
+    await new Promise(r => setTimeout(r, 200))
+    commit('leaveDescription')
   }
 }
 
-export const actions = {
-  leaveDescription({commit}){
-    
-  }
+export const mutations = {
+  enterDescription(state, description){
+    state.chosenDescription = description
+    state.isOpen = true
+  },
+  leaveWindow(state){
+    state.isOpen = false
+  },
+  leaveDescription(state){
+    state.chosenDescription = null
+  },
 }
