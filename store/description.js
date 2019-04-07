@@ -10,3 +10,9 @@ export const mutations = {
     state.isOpen = true
   }
 }
+
+export const actions = {
+  leaveDescription({commit}){
+    
+  }
+}

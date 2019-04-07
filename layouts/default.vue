@@ -3,17 +3,19 @@
     leaflet-area
     menu-bar
     nuxt
+    description-window
 </template>
 
 <script>
 
 import MenuBar from '~/components/MenuBar.vue'
 import LeafletArea from '~/components/LeafletArea.vue'
-
+import DescriptionWindow from '~/components/DescriptionWindow.vue'
 export default {
   components:{
     MenuBar,
     LeafletArea,
+    DescriptionWindow
   },
   mounted(){
     this.$store.dispatch('mounted/setStatic100vh')
