@@ -7,16 +7,19 @@
           v-for='(building, i) in $store.getters["buildings/buildings"]'
           :key='`building-${i}`'
           :lat-lng='[building.lat, building.long]'
+          @click='$store.commit("description/enterDescription", building)'
         )
         l-circle(
           v-for='(ghost, i) in $store.getters["ghosts/ghosts"]'
           :key='`ghost-${i}`'
           :lat-lng='[ghost.lat, ghost.long]'
+          @click='$store.commit("description/enterDescription", ghost)'
         )
         l-circle(
           v-for='(danger, i) in $store.getters["dangers/dangers"]'
           :key='`danger-${i}`'
           :lat-lng='[danger.lat, danger.long]'
+          @click='$store.commit("description/enterDescription", danger)'
         )
         
 </template>

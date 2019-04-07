@@ -13,11 +13,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: 'nuxtshibata',
+    title: '柴田アクティブストリート',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'Nuxt.js project' },
+      { hid: 'description', name: 'description', content: '柴田アクティブストリート' },
       { name: "robots", content: "noindex" },
       { name: "robots", content: "nofollow" },
       { name: "robots", content: "noachieve" },
