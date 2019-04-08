@@ -3,10 +3,12 @@ div.description-card
   img(:src='card.src', alt='')
   span
     kana-ruby(
+      v-if='card.kanas'
       v-for='(kana, i) in card.kanas'
       :kana='kana'
       :key='`${propKey}-${i}`'
     )
+    span(v-if='card.mes') {{card.mes}}
 
 </template>
 
@@ -36,4 +38,6 @@ export default {
     height 120px
   span
     text-align left
+    font-weight bold
+    line-height 200%
 </style>

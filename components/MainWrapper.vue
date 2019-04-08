@@ -17,7 +17,7 @@
   justify-content center
   background-color rgba(0,0,0,.6)
 
-  div.main
+  .main
     width 90%
     max-width 540px
     display flex

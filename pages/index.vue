@@ -16,10 +16,10 @@
         | ポイント
 
       description-card(
-        v-for='(card, i) in $store.getters["aboutasp/aboutasp"]'
+        v-for='(card, i) in $store.getters["aboutasp/top"]'
         :card='card',
-        :key='`description-card-${i}`'
-        :propKey='`description-card-${i}`'
+        :key='`description-card-top-${i}`'
+        :propKey='`description-card-top-${i}`'
       )
 
 </template>

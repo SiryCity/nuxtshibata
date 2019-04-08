@@ -1,7 +1,7 @@
 module.exports = {
   css: [
     'reset-css',
-    "leaflet/dist/leaflet.css"
+    "leaflet/dist/leaflet.css",
   ],
   plugins: [
     {

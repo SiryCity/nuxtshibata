@@ -11,7 +11,7 @@ import daidoLogo from '~/assets/daido_uni.svg'
 
 
 export const getters = {
-  aboutasp: () =>
+  top: () =>
     [
       {
         isSP: true,
@@ -172,7 +172,7 @@ export const getters = {
         ],
       },
     ],
-  members: () =>
+  about: () =>
     [
       {
         src: daidoLogo,
