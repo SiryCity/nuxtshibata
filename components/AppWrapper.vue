@@ -14,8 +14,5 @@
   justify-content center
   align-items center
   background-color rgba(0,0,0,.6)
-
-  .copy
-    font-weight bold
-    margin 50px 0 10px
+  
 </style>

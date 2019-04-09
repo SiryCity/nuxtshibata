@@ -39,6 +39,5 @@ export default {
     margin-bottom -10px
   span
     text-align left
-    font-weight bold
     line-height 200%
 </style>

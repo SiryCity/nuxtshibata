@@ -69,7 +69,6 @@ export default {
 
 <style lang="stylus" scoped>
 h2
-  font-weight bold
   font-size 20px
   margin-top 50px
 .students
@@ -80,7 +79,6 @@ h2
   border-bottom 2px solid var(--color-white)
   box-sizing border-box
   overflow scroll
-  font-weight bold
   text-align left
   display flex
   flex-direction column

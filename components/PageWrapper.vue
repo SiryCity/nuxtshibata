@@ -41,11 +41,9 @@ export default {
       align-items center
       h1
         font-size 20px
-        font-weight bold
       img
         width 100%
         height auto
   .copy
     margin 50px 0 10px
-    font-weight bold
 </style>

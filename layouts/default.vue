@@ -40,6 +40,7 @@ html
   box-sizing border-box
   background-color var(--color-darkblue)
   color var(--color-white)
+  font-weight bold
 *
 *before
 *after

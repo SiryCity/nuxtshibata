@@ -16,7 +16,7 @@
         p QRコード
       nuxt-link(:to='{name: "about"}')
         img(src='~/assets/shibata_logo_white.svg')
-        p せいさく
+        p メンバー
 </template>
 
 
@@ -29,7 +29,6 @@
   justify-content center
   position fixed
   bottom 0
-  z-index 1
   #menubar
     width 100%
     max-width 540px
@@ -52,6 +51,5 @@
         height 50%
       p
         font-size 14px
-        font-weight bold
 
 </style>
