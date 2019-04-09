@@ -1,8 +1,8 @@
 <template lang="pug">
   div#root
     leaflet-area
-    menu-bar
     nuxt
+    menu-bar
     description-window
 </template>
 
@@ -53,6 +53,7 @@ body
   --color-white #eee
   --color-black #222
   --height-menubar 60px
+  --static100vh-without-menubar calc(var(--static100vh) - var(--height-menubar))
 
 // これやっていいか不明
 body
@@ -65,8 +66,7 @@ body
   width 100%
   height var(--static100vh, 100vh)
   display flex
-  flex-direction column
-  align-items center
+  justify-content center
   position relative
   z-index -2
 

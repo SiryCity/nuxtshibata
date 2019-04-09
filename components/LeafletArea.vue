@@ -28,17 +28,20 @@
 <style lang="stylus">
 .leaflet__wrapper
   width 100vw
-  height calc(var(--static100vh, 100vh) - var(--height-menubar))
-  position relative
+  height calc(100% - var(--height-menubar))
+  position absolute
+  top 0
+  left 0
   z-index -1
-.mini-map
-  width 100%
-  height calc(var(--static100vh, 100vh) - var(--height-menubar))
 
-.leaflet-interactive
-  stroke #333
-  stroke-width 2px
-  fill orange
-  fill-opacity 1
-  background-color unset
+  .mini-map
+    width 100%
+    height calc(var(--static100vh, 100vh) - var(--height-menubar))
+
+    .leaflet-interactive
+      stroke #333
+      stroke-width 2px
+      fill orange
+      fill-opacity 1
+      background-color unset
 </style>

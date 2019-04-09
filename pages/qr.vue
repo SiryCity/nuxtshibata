@@ -1,12 +1,13 @@
 <template lang="pug">
-  main-wrapper test
+app-wrapper
+  p test
 </template>
 
 <script>
-import MainWrapper from '~/components/MainWrapper.vue'
+import AppWrapper from '~/components/AppWrapper.vue'
 export default {
   components:{
-    MainWrapper
+    AppWrapper
   }
 }
 </script>

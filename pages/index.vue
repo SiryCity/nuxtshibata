@@ -1,36 +1,26 @@
 <template lang="pug">
-  main-wrapper
-    div.first-view
-      img(src='~/assets/shibata_logo_white.svg' alt='')
-      h1 柴田アクティブストリート
-      //-
-        div お買い物でためる
-        nuxt-link(:to='{name: "stamp"}') スタンプをおしてもらう
-        nuxt-link(:to='{name: "map"}') スタンプのたまるお店をさがす
-        div 探検でためる
-        nuxt-link(:to='{name: "map"}') QRコードのある場所をさがす
-        div 探検でためる
-      div.current-points
-        | 現在
-        span {{$store.state.stamp.pts}}
-        | ポイント
+  page-wrapper(:pageTitle='"あそびかた"')
+    div.current-points
+      | 現在
+      span {{$store.state.stamp.pts}}
+      | ポイント
 
-      description-card(
-        v-for='(card, i) in $store.getters["aboutasp/top"]'
-        :card='card',
-        :key='`description-card-top-${i}`'
-        :propKey='`description-card-top-${i}`'
-      )
+    description-card(
+      v-for='(card, i) in $store.getters["aboutasp/top"]'
+      :card='card'
+      :key='`description-card-top-${i}`'
+      :propKey='`description-card-top-${i}`'
+    )
 
 </template>
 
 
 <script>
-import MainWrapper from '~/components/MainWrapper.vue'
+import PageWrapper from '~/components/PageWrapper.vue'
 import DescriptionCard from '~/components/DescriptionCard.vue'
 export default {
   components:{
-    MainWrapper,
+    PageWrapper,
     DescriptionCard,
   }
 }
@@ -38,19 +28,6 @@ export default {
 
 
 <style lang="stylus" scoped>
-.first-view
-  display flex
-  flex-direction column
-  justify-content flex-start
-  text-align center
-  font-weight bold
-  
-  a
-    color var(--color-darkblue)
-    background-color var(--color-white)
-    text-decoration none
-    border-radius 5px
-
 .current-points
   margin 60px 0 20px
   span

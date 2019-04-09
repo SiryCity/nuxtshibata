@@ -27,7 +27,8 @@
   background-color var(--color-darkblue)
   display flex
   justify-content center
-  position relative
+  position fixed
+  bottom 0
   z-index 1
   #menubar
     width 100%

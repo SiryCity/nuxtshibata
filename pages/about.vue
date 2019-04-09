@@ -1,5 +1,5 @@
 <template lang="pug">
-  main-wrapper
+  page-wrapper(:pageTitle='"プロジェクト"')
     description-card(
       v-for='(card, i) in $store.getters["aboutasp/about"]'
       :card='card',
@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import MainWrapper from '~/components/MainWrapper.vue'
+import PageWrapper from '~/components/PageWrapper.vue'
 import DescriptionCard from '~/components/DescriptionCard.vue'
 export default {
   components:{
-    MainWrapper,
+    PageWrapper,
     DescriptionCard,
   }
 }

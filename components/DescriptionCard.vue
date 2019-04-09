@@ -32,10 +32,11 @@ export default {
   display flex
   flex-direction column
   align-items center
-  margin 30px 0
+  margin 70px 0
   img
-    width 120px
-    height 120px
+    width 110px
+    height auto
+    margin-bottom -10px
   span
     text-align left
     font-weight bold
