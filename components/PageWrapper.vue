@@ -30,9 +30,8 @@ export default {
     max-width 540px
     height auto
     display flex
-    flex-direction column
-    justify-content flex-start
-    align-items center
+    flex-wrap wrap
+    justify-content center
     .title-box
       width 100%
       margin calc(var(--static100vh-without-menubar) / 3) 0 20px
