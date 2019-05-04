@@ -2,23 +2,27 @@
   div#root
     leaflet-area
     nuxt
+    point-area
     menu-bar
     description-window
 </template>
 
 <script>
 
-import MenuBar from '~/components/MenuBar.vue'
 import LeafletArea from '~/components/LeafletArea.vue'
+import PointArea from '~/components/PointArea.vue'
+import MenuBar from '~/components/MenuBar.vue'
 import DescriptionWindow from '~/components/DescriptionWindow.vue'
 export default {
   components:{
-    MenuBar,
     LeafletArea,
+    PointArea,
+    MenuBar,
     DescriptionWindow
   },
   mounted(){
     this.$store.dispatch('mounted/setStatic100vh')
+    this.$store.commit('mounted/visiblePointArea')
     
     document.addEventListener('visibilitychange', () => {
       this.$store.commit('stamp/resetChallenges')
@@ -31,7 +35,7 @@ export default {
 
 :root
   --static100vh 100vh
-  --height-menubar 60px
+  --height-menubar 65px
   --static100vh-without-menubar calc(var(--static100vh) - var(--height-menubar))
 
   --color-darkblue #00175A
@@ -80,6 +84,7 @@ body
   justify-content center
   position relative
   z-index -2
+  overflow hidden
 
 </style>
 

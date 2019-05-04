@@ -1,3 +1,7 @@
+export const state = () =>
+({
+  isLoaded: false
+})
 
 export const getters = {
   //スマートフォンか
@@ -19,6 +23,10 @@ export const mutations = {
       '--static100vh',
       isSP ? window.outerHeight + 'px' : '100vh'
     )
+  },
+
+  visiblePointArea(state){
+    state.isLoaded = true
   },
 
 }

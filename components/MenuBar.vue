@@ -16,7 +16,7 @@
         p QRコード
       nuxt-link(:to='{name: "about"}')
         img(src='~/assets/menu-icon-member.svg')
-        p メンバー
+        p アプリ
 </template>
 
 
@@ -29,21 +29,22 @@
   position fixed
   bottom 0
   box-sizing border-box
-  border-top 4px var(--color-lightgreen) dashed
   background-color var(--color-brown)
   #menubar
     width 100%
-    max-width 540px
-    height 100%
+    margin-top 5px
+    height calc(100% - 5px)
+    border-top 2px var(--color-lightgreen) dashed
     display flex
     align-content space-evenly
-    justify-content space-around
+    justify-content center
     a
       width 20%
+      max-width 108px
       height 100%
       display flex
       flex-direction column
-      justify-content space-around
+      justify-content space-evenly
       align-items center
       text-decoration none
       color var(--color-darkbrown)

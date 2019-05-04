@@ -1,10 +1,5 @@
 <template lang="pug">
-  page-wrapper(:pageTitle='"あそびかた"')
-    div.current-points
-      | 現在
-      span {{$store.state.stamp.pts}}
-      | ポイント
-
+  page-wrapper(:pageTitle='"つかいかた"')
     description-card(
       v-for='(card, i) in $store.getters["aboutasp/top"]'
       :card='card'
@@ -28,12 +23,6 @@ export default {
 
 
 <style lang="stylus" scoped>
-.current-points
-  margin 60px 0 20px
-  span
-    font-size 300%
-    font-weight normal
-    margin 0 5px
 </style>
 
 
