@@ -3,7 +3,7 @@
    nav#menubar__wrapper
      div#menubar
       nuxt-link(:to='{name: "index"}')
-        img(src='~/assets/shibata_logo_white.svg')
+        img(src='~/assets/shibata_logo_green.svg')
         p ホーム
       nuxt-link(:to='{name: "map"}')
         img(src='~/assets/menu-icon-map.svg')
@@ -15,7 +15,7 @@
         img(src='~/assets/menu-icon-qr.svg')
         p QRコード
       nuxt-link(:to='{name: "about"}')
-        img(src='~/assets/shibata_logo_white.svg')
+        img(src='~/assets/shibata_logo_green.svg')
         p メンバー
 </template>
 
@@ -24,32 +24,34 @@
 #menubar__wrapper
   width 100%
   height var(--height-menubar)
-  background-color var(--color-darkblue)
   display flex
   justify-content center
   position fixed
   bottom 0
+  box-sizing border-box
+  border-top 4px var(--color-lightgreen) dashed
   #menubar
     width 100%
     max-width 540px
-    height var(--height-menubar)
+    height 100%
     display flex
-    align-items center
+    align-content space-evenly
     justify-content space-around
     a
-      width 25%
+      width 20%
       height 100%
       display flex
       flex-direction column
       justify-content space-around
       align-items center
       text-decoration none
-      color var(--color-white)
-      background-color var(--color-darkblue)
+      color var(--color-darkbrown)
       img
-        width 50%
-        height 50%
+        width 60%
+        height 30px
+        object-fit contain
       p
-        font-size 14px
+        height 10px
+        font-size 12px
 
 </style>

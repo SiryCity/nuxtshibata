@@ -2,7 +2,7 @@
   div.main__wrapper
     div.main 
       div.title-box(v-if='pageTitle')
-        img(src='~/assets/shibata_logo_white.svg' :alt='pageTitle')
+        img(src='~/assets/shibata_logo_green.svg' :alt='pageTitle')
         h1 {{pageTitle}}
       slot
       div.copy &copy; 2019 Shibata Active Street
@@ -23,7 +23,7 @@ export default {
   overflow scroll
   display flex
   justify-content center
-  background-color rgba(0,0,0,.6)
+  background-color rgba(253, 245, 230, .8)
 
   .main
     width 90%
