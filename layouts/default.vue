@@ -40,9 +40,11 @@ export default {
 
   --color-lightbrown oldlace // 背景色 超薄い茶色
   --color-lightgreen rgb(51, 153, 51) // アイコンの色普通の緑
-  --color-darkbrown rgb(58, 38, 4)
+  --color-darkbrown rgb(104, 63, 8)
   --color-darkgreen rgb(6, 56, 16)
-  --color-brown rgb(216, 186, 134)
+  --color-brown rgb(237, 211, 166)
+
+  --color-bg rgba(253, 245, 230, .8)
 
 html
   font-family "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
@@ -63,6 +65,7 @@ html
   margin 0
 body
   margin 0
+
 // これやっていいか不明
 body
 #__nuxt

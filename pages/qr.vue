@@ -1,11 +1,13 @@
 <template lang="pug">
 app-wrapper
-  div.stamp__message QRコードをみつけたら
-  div.stamp__message さつえいしてポイントゲット!
-  div.stamparea(
-    @touchstart='beginShooting'
-  )
-    div.stamp__message カメラをきどう
+  p.stamp__message QRコードをみつけたら
+  br
+  | さつえいしてポイントゲット!
+  div.stamparea__wrappper
+    div.stamparea(
+      @touchstart='beginShooting'
+    )
+      p.stamp__message カメラをきどう
 
 </template>
 
@@ -23,26 +25,33 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+.stamparea__wrappper
+  width 90vw
+  height 90vw
+  max-width var(--static100vh-without-menubar)
+  max-height var(--static100vh-without-menubar)
+  max-width 540px
+  max-height 540px
+  background-color var(--color-brown)
+  border-radius 10px
+  margin 10px 0
+  line-height 90%
 .stamparea
-  width 80vmin
-  height 80vmin
+  width calc(100% - 20px)
+  height calc(100% - 20px)
   text-align center
   font-size 120%
-  border #222 solid 7px
+
   box-sizing border-box
-  background linear-gradient(63deg, #914f2b 23%, transparent 23%) 7px 0,
-    linear-gradient(63deg, transparent 74%, #914f2b 78%),
-    linear-gradient(63deg, transparent 34%, #914f2b 38%, #914f2b 58%, transparent 62%),
-    #222
   background-size 16px 48px
   display flex
   flex-direction column
   justify-content center
   align-items center
-  margin 20px 0
+  margin 10px
+  border 4px var(--color-darkbrown) dashed
+  border-radius 7px
 
 .stamp__message
-  margin 2vmin 0
+  line-height 90%
 </style>
-
-

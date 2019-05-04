@@ -3,7 +3,7 @@
    nav#menubar__wrapper
      div#menubar
       nuxt-link(:to='{name: "index"}')
-        img(src='~/assets/shibata_logo_green.svg')
+        img(src='~/assets/menu-icon-home.svg')
         p ホーム
       nuxt-link(:to='{name: "map"}')
         img(src='~/assets/menu-icon-map.svg')
@@ -12,10 +12,10 @@
         img(src='~/assets/menu-icon-stamp.svg')
         p スタンプ
       nuxt-link(:to='{name: "qr"}')
-        img(src='~/assets/menu-icon-qr.svg')
+        img(src='~/assets/menu-icon-camera.svg')
         p QRコード
       nuxt-link(:to='{name: "about"}')
-        img(src='~/assets/shibata_logo_green.svg')
+        img(src='~/assets/menu-icon-member.svg')
         p メンバー
 </template>
 
@@ -30,6 +30,7 @@
   bottom 0
   box-sizing border-box
   border-top 4px var(--color-lightgreen) dashed
+  background-color var(--color-brown)
   #menubar
     width 100%
     max-width 540px

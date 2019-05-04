@@ -95,6 +95,7 @@ export const mutations = {
 
     // ポイントを追加
     state.pts += shopYouAre.pts
+    alert('test: ポイントが追加されました。')
   },
 
   // チャレンジ回数をリセットする

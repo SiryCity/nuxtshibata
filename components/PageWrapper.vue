@@ -23,7 +23,7 @@ export default {
   overflow scroll
   display flex
   justify-content center
-  background-color rgba(253, 245, 230, .8)
+  background-color var(--color-bg)
 
   .main
     width 90%

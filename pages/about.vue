@@ -1,5 +1,5 @@
 <template lang="pug">
-  page-wrapper(:pageTitle='"プロジェクト"')
+  page-wrapper(:pageTitle='"アプリについて"')
     description-card(
       v-for='(card, i) in $store.getters["aboutasp/about"]'
       :card='card',
@@ -75,8 +75,8 @@ h2
   width 100%
   height 120px
   margin 10px 0
-  border-top 2px solid var(--color-white)
-  border-bottom 2px solid var(--color-white)
+  border-top 2px solid var(--color-darkbrown)
+  border-bottom 2px solid var(--color-darkbrown)
   box-sizing border-box
   overflow scroll
   text-align left

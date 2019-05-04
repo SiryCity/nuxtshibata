@@ -13,6 +13,6 @@
   flex-direction column
   justify-content center
   align-items center
-  background-color rgba(0,0,0,.6)
+  background-color var(--color-bg)
   
 </style>
