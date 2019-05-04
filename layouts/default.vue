@@ -1,5 +1,5 @@
 <template lang="pug">
-  div#root
+  div#root(:class='{"root--loaded": $store.state.mounted.isLoaded}')
     leaflet-area
     nuxt
     point-area
@@ -86,6 +86,13 @@ body
   position relative
   z-index -2
   overflow hidden
+  visibility hidden
+  opacity 0
+  transition-duration .4s
+  transition-property opacity, visibility
 
+.root--loaded
+  visibility visible !important
+  opacity 1 !important
 </style>
 

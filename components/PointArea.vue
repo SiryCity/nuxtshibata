@@ -30,14 +30,13 @@
     align-items flex-start
     .point-area__tag
       width 50%
-      text-align right
-      margin-left -7px
+      text-align center
       font-size 12px
     .point-area__pts
       width 50%
       font-size 24px
-      text-align right
-      margin 2px 0 5px -7px
+      text-align center
+      margin 2px 0 5px 0
 
 .point-area__wapper--loaded
   transform translateX(85px)

@@ -8,6 +8,7 @@ app-wrapper
       @touchstart='pressTheStamp'
       @touchend='pressTheStamp'
     )
+      img(src='~/assets/menu-icon-stamp.svg')
       p.stamp__message ここにスタンプを
       br
       | おしてもらう
@@ -52,6 +53,10 @@ export default {
   align-items center
   border 4px var(--color-darkbrown) dashed
   border-radius 7px
+  img
+    width 30%
+    height 30%
+    margin-bottom 15px
 
 .stamp__message
   line-height 90%
