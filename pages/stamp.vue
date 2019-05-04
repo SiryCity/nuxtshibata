@@ -31,8 +31,6 @@ export default {
 .stamparea__wrappper
   width 90vw
   height 90vw
-  max-width var(--static100vh-without-menubar)
-  max-height var(--static100vh-without-menubar)
   max-width 540px
   max-height 540px
   background-color var(--color-brown)
@@ -42,6 +40,7 @@ export default {
 .stamparea
   width calc(100% - 20px)
   height calc(100% - 20px)
+  margin 10px
   text-align center
   font-size 120%
 
@@ -51,7 +50,6 @@ export default {
   flex-direction column
   justify-content center
   align-items center
-  margin 10px
   border 4px var(--color-darkbrown) dashed
   border-radius 7px
 

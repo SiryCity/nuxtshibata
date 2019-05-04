@@ -124,7 +124,7 @@ export const getters = {
       },
       {
           name:'ペットボトルおばけ',
-          description: '丸久精肉店にあらわれた、ペットボトåルの おばけ。',
+          description: '丸久精肉店にあらわれた、ペットボトルの おばけ。',
           src: ghost9,
           author: '鯉江政称 (大同大学)',
           lat: 35.0738,

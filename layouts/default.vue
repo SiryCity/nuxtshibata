@@ -50,6 +50,7 @@ export default {
 
   --color-bg rgba(253, 245, 230, .8)
 
+
 html
   font-family "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif
   font-size 16px
