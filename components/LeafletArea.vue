@@ -2,7 +2,7 @@
   div.leaflet__wrapper
     no-ssr
       l-map.mini-map(:zoom='16' :center='[35.0742236, 136.910764]')
-        l-tile-layer(url='http://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png')
+        l-tile-layer(url='https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.png')
         l-circle(
           v-for='(building, i) in $store.getters["buildings/buildings"]'
           :key='`building-${i}`'
