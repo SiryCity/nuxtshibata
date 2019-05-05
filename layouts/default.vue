@@ -23,7 +23,7 @@ export default {
   mounted(){
     this.$store.dispatch('mounted/setStatic100vh')
     this.$store.commit('mounted/visiblePointArea')
-    
+    this.$store.dispatch('camera/returnDisplay')
     document.addEventListener('visibilitychange', () => {
       this.$store.commit('stamp/resetChallenges')
     })

@@ -1,14 +1,29 @@
 <template lang="pug">
 app-wrapper
-  p.stamp__message QRコードをみつけたら
+  p.camera__message QRコードをみつけたら
   br
   | さつえいしてポイントゲット!
-  div.stamparea__wrappper
-    div.stamparea(
-      @touchstart='beginShooting'
+  div.cameraarea__wrappper
+    div.cameraarea(
+      :class='{"cameraarea--hidden": $store.state.saveData.display !== "initial"}'
+      @touchstart='checkCameraPermission'
     )
       img(src='~/assets/menu-icon-camera.svg')
-      p.stamp__message カメラをきどう
+      p.camera__message カメラをきどう
+
+    video.cameraarea#video(
+      autoplay=''
+      :class='{"cameraarea--hidden": $store.state.saveData.display !== "video"}'
+    )
+
+    div.cameraarea(
+      :class='{"cameraarea--hidden": $store.state.saveData.display !== "reject"}'
+      @touchstart='checkCameraPermission'
+    )
+      img(src='~/assets/menu-icon-camera.svg')
+      p.camera__message せっていから
+      br
+      | カメラをきょかしてね!
 
 </template>
 
@@ -19,14 +34,14 @@ export default {
     AppWrapper
   },
   methods:{
-    beginShooting(e){this.$store.dispatch('camera/beginShooting', e)}
+    checkCameraPermission(e){this.$store.dispatch('camera/checkCameraPermission', e)}
   },
 }
 
 </script>
 
 <style lang="stylus" scoped>
-.stamparea__wrappper
+.cameraarea__wrappper
   width 90vw
   height 90vw
   max-width var(--static100vh-without-menubar)
@@ -37,7 +52,8 @@ export default {
   border-radius 10px
   margin 10px 0
   line-height 90%
-.stamparea
+  position relative
+.cameraarea
   width calc(100% - 20px)
   height calc(100% - 20px)
   text-align center
@@ -49,7 +65,9 @@ export default {
   flex-direction column
   justify-content center
   align-items center
-  margin 10px
+  position absolute
+  top 10px
+  left 10px
   border 4px var(--color-darkbrown) dashed
   border-radius 7px
   img
@@ -57,6 +75,10 @@ export default {
     height 30%
     margin-bottom 15px
 
-.stamp__message
+.camera__message
   line-height 90%
+
+.cameraarea--hidden
+  visibility hidden
+  pointer-events none
 </style>
