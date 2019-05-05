@@ -11,16 +11,50 @@ export const actions = {
         audio: false,
       })
       
-      // アクセス不可能な場合
-      // 画面に動画を表示
+      // アクセス可能な場合
+      // video要素に動画を表示
       document.getElementById('video').srcObject = media
+      // 画面を切り替え
       commit('changeDisplay', {display: 'video', rootState})
+
+      // svgとimgに動画をコピーしていく処理をループ
+      dispatch('drawImg')
+
     }
 
     // アクセス不可能な場合
     catch(e){
       commit('changeDisplay', {display: 'reject', rootState})
     }
+  },
+
+  drawImg: async({dispatch}) => {
+
+    await new Promise(r => setTimeout(r, 250))
+       
+    const video = document.getElementById('video')
+    const vWidth = video.videoWidth
+    const vHeight = video.videoHeight
+    const canvas = document.getElementById('canvas')
+    const imag = document.getElementById('img')
+    
+    const ctx = canvas.getContext('2d')
+    ctx.drawImage(
+      video,
+      vWidth <= vHeight ? 0 : vWidth / 2 - Math.min(vWidth, vHeight) / 2,
+      vHeight <= vWidth ? 0 : vHeight / 2 - Math.min(vWidth, vHeight) / 2,
+      Math.min(vWidth, vHeight),
+      Math.min(vWidth, vHeight),
+      0,
+      0,
+      canvas.offsetWidth,
+      canvas.offsetHeight
+    )
+
+    imag.src = canvas.toDataURL('image/png')
+
+    dispatch('drawImg')
+
   },
 
 

@@ -4,6 +4,8 @@ app-wrapper
   br
   | さつえいしてポイントゲット!
   div.cameraarea__wrappper
+
+    //- 最初の画面
     div.cameraarea(
       :class='{"cameraarea--hidden": $store.state.saveData.display !== "initial"}'
       @touchstart='checkCameraPermission'
@@ -11,11 +13,16 @@ app-wrapper
       img(src='~/assets/menu-icon-camera.svg')
       p.camera__message カメラをきどう
 
-    video.cameraarea#video(
-      autoplay=''
+    //- 撮影中
+    video.cameraarea.cameraarea--hidden#video(autoplay='')
+    
+    canvas.cameraarea.cameraarea--hidden#canvas
+
+    img.cameraarea#img(
       :class='{"cameraarea--hidden": $store.state.saveData.display !== "video"}'
     )
 
+    //- 拒否された時
     div.cameraarea(
       :class='{"cameraarea--hidden": $store.state.saveData.display !== "reject"}'
       @touchstart='checkCameraPermission'
@@ -34,13 +41,15 @@ export default {
     AppWrapper
   },
   methods:{
-    checkCameraPermission(e){this.$store.dispatch('camera/checkCameraPermission', e)}
+    checkCameraPermission(e){this.$store.dispatch('camera/checkCameraPermission', e)},
   },
 }
 
 </script>
 
 <style lang="stylus" scoped>
+#img
+  transform rotateY(180deg)
 .cameraarea__wrappper
   width 90vw
   height 90vw
@@ -66,8 +75,11 @@ export default {
   justify-content center
   align-items center
   position absolute
-  top 10px
-  left 10px
+  top 0
+  bottom 0
+  left 0
+  right 0
+  margin auto
   border 4px var(--color-darkbrown) dashed
   border-radius 7px
   img
