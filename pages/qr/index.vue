@@ -1,8 +1,10 @@
+
 <template lang="pug">
 app-wrapper
   p.camera__message QRコードをみつけたら
   br
   | さつえいしてポイントゲット!
+  
   div.cameraarea__wrappper
 
     //- 最初の画面
@@ -15,10 +17,8 @@ app-wrapper
 
     //- 撮影中
     video.cameraarea.cameraarea--hidden#video(autoplay='')
-    
-    canvas.cameraarea.cameraarea--hidden#canvas
 
-    img.cameraarea#img(
+    canvas.cameraarea#canvas(
       :class='{"cameraarea--hidden": $store.state.saveData.display !== "video"}'
     )
 
@@ -48,13 +48,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-#img
-  transform rotateY(180deg)
+#canvas
+  width 100%
+  height 100%
+  border unset
 .cameraarea__wrappper
   width 90vw
   height 90vw
-  max-width var(--static100vh-without-menubar)
-  max-height var(--static100vh-without-menubar)
   max-width 540px
   max-height 540px
   background-color var(--color-brown)

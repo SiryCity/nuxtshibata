@@ -1,3 +1,4 @@
+import jsQR from 'jsqr'
 
 export const actions = {
   // カメラへのアクセスが許可されているかの確認
@@ -35,26 +36,47 @@ export const actions = {
     const video = document.getElementById('video')
     const vWidth = video.videoWidth
     const vHeight = video.videoHeight
+    const vMin = Math.min(vWidth, vHeight)
+
     const canvas = document.getElementById('canvas')
-    const imag = document.getElementById('img')
-    
-    const ctx = canvas.getContext('2d')
-    ctx.drawImage(
+    const cWidth = canvas.offsetWidth
+    const cHeight = canvas.offsetHeight
+    const context = canvas.getContext('2d')
+
+    context.drawImage(
       video,
-      vWidth <= vHeight ? 0 : vWidth / 2 - Math.min(vWidth, vHeight) / 2,
-      vHeight <= vWidth ? 0 : vHeight / 2 - Math.min(vWidth, vHeight) / 2,
-      Math.min(vWidth, vHeight),
-      Math.min(vWidth, vHeight),
+      vWidth <= vHeight ? 0 : vWidth / 2 - vMin / 2,
+      vHeight <= vWidth ? 0 : vHeight / 2 - vMin / 2,
+      vMin,
+      vMin,
       0,
       0,
-      canvas.offsetWidth,
-      canvas.offsetHeight
+      cWidth,
+      cHeight,
     )
 
-    imag.src = canvas.toDataURL('image/png')
+    const judge = context.getImageData(
+      0,
+      0,
+      cWidth,
+      cHeight,
+    )
 
-    dispatch('drawImg')
+    const code = jsQR(
+      judge.data,
+      cWidth,
+      cHeight,
+    )
+    
+    console.dir(code)
+    if(code){
+      videoStreamInUse.getVideoTracks()[0].stop()
+      alert(code.data)
+    } else {
 
+      dispatch('drawImg')
+
+    }
   },
 
 
