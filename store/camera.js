@@ -19,7 +19,7 @@ export const actions = {
       commit('changeDisplay', {display: 'video', rootState})
 
       // svgとimgに動画をコピーしていく処理をループ
-      dispatch('drawImg')
+      dispatch('drawImg', media)
 
     }
 
@@ -29,7 +29,7 @@ export const actions = {
     }
   },
 
-  drawImg: async({dispatch}) => {
+  drawImg: async({dispatch}, media) => {
 
     await new Promise(r => setTimeout(r, 250))
        
@@ -68,13 +68,17 @@ export const actions = {
       cHeight,
     )
     
-    console.dir(code)
     if(code){
-      videoStreamInUse.getVideoTracks()[0].stop()
+      media.getVideoTracks().forEach(track => {
+        track.stop()
+      })
+      media.getAudioTracks().forEach(track => {
+        track.stop()
+      })
       alert(code.data)
     } else {
 
-      dispatch('drawImg')
+      dispatch('drawImg', media)
 
     }
   },
