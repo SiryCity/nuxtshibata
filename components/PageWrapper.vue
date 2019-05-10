@@ -18,12 +18,13 @@ export default {
 <style lang="stylus" scoped>
 .main__wrapper
   width 100%
-  height var(--static100vh-without-menubar)
+  height auto
 
   overflow scroll
   display flex
   justify-content center
   background-color var(--color-bg)
+  margin-bottom var(--height-menubar)
 
   .main
     width 90%

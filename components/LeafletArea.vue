@@ -29,19 +29,22 @@
 .leaflet__wrapper
   width 100vw
   height calc(100% - var(--height-menubar))
-  position absolute
+  position fixed
   top 0
   left 0
-  z-index -1
 
   .mini-map
     width 100%
     height calc(var(--static100vh, 100vh) - var(--height-menubar))
 
     .leaflet-interactive
-      stroke #333
+      stroke var(--color-darkbrown)
       stroke-width 2px
-      fill orange
+      fill var(--color-brown)
       fill-opacity 1
       background-color unset
+
+.leaflet-control-zoom-in
+.leaflet-control-zoom-out
+  background-color var(--color-brown) !important
 </style>

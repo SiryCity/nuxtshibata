@@ -10,7 +10,7 @@
   width 170px
   height 65px
   background-color var(--color-brown)
-  position absolute
+  position fixed
   top 20px
   right 0
   border-radius 10px

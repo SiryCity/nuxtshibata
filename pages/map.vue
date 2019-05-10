@@ -1,3 +1,14 @@
 <template lang="pug">
-  span
+  leaflet-area
 </template>
+
+
+<script>
+
+import LeafletArea from '~/components/LeafletArea.vue'
+export default {
+  components:{
+    LeafletArea,
+  },
+}
+</script>

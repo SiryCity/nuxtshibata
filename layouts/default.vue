@@ -1,6 +1,5 @@
 <template lang="pug">
   div#root(:class='{"root--loaded": $store.state.mounted.isLoaded}')
-    leaflet-area
     nuxt
     point-area
     menu-bar
@@ -9,13 +8,11 @@
 
 <script>
 
-import LeafletArea from '~/components/LeafletArea.vue'
 import PointArea from '~/components/PointArea.vue'
 import MenuBar from '~/components/MenuBar.vue'
 import DescriptionWindow from '~/components/DescriptionWindow.vue'
 export default {
   components:{
-    LeafletArea,
     PointArea,
     MenuBar,
     DescriptionWindow
@@ -71,20 +68,13 @@ html
 body
   margin 0
 
-// これやっていいか不明
-body
-#__nuxt
-#__layout
-  position relative
-  z-index -2
 
 #root
   width 100%
-  height var(--static100vh, 100vh)
+  min-height var(--static100vh)
   display flex
   justify-content center
   position relative
-  z-index -2
   overflow hidden
   visibility hidden
   opacity 0

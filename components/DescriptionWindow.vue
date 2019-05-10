@@ -33,7 +33,7 @@
   display flex
   justify-content center
   align-items center
-  z-index 100
+  z-index 9999
   transition-duration .2s
   transition-property opacity
 

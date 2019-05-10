@@ -83,8 +83,6 @@ h2
   display flex
   flex-direction column
   align-items flex-start
-  z-index 100
-  position relative
   padding-bottom 20px
   h3
     font-size 18px
