@@ -1,4 +1,5 @@
 export const state = () =>
 ({
-  display: 'initial'
+  display: 'initial',
+  pts: 0,
 })

@@ -1,6 +1,5 @@
 export const state = () =>
 ({
-  pts: 0,
   challenges: {
     times: 0,
     previousHours: null,
@@ -8,7 +7,7 @@ export const state = () =>
 })
 
 export const mutations = {
-  calcPts(state, {placesOfClaw, dataOfShops}){
+  calcPts(state, {placesOfClaw, dataOfShops, rootState}){
     
     const CLAWS_FOR_ONE_SIDE = 6
     const COLLECT_CLAWS = 4
@@ -94,7 +93,7 @@ export const mutations = {
     if(!(shopYouAre.openedHours.to > date.getHours())) return
 
     // ポイントを追加
-    state.pts += shopYouAre.pts
+    rootState.saveData.pts += shopYouAre.pts
     alert('test: ポイントが追加されました。')
   },
 
@@ -105,7 +104,7 @@ export const mutations = {
 }
 
 export const actions = {
-  pressTheStamp({commit, rootGetters}, placesOfClaw){
-    commit('calcPts', {placesOfClaw, dataOfShops: rootGetters['buildings/buildings']})
+  pressTheStamp({commit, rootGetters, rootState}, placesOfClaw){
+    commit('calcPts', {placesOfClaw, dataOfShops: rootGetters['buildings/buildings'], rootState})
   }
 }

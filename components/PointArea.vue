@@ -2,7 +2,7 @@
   div.point-area__wapper(:class='{"point-area__wapper--loaded": $store.state.mounted.isLoaded}')
     div.point-area
       div.point-area__tag ポイント
-      div.point-area__pts {{$store.state.stamp.pts}}
+      div.point-area__pts {{$store.state.saveData.pts}}
 </template>
 
 <style lang="stylus" scoped>

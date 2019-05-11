@@ -1,5 +1,9 @@
 <template lang="pug">
   page-wrapper(:pageTitle='"このアプリについて"')
+    div.title-box
+      img(src='~/assets/shibata_logo_green.svg' :alt='"このアプリについて"')
+      h1 このアプリについて
+
     description-card(
       v-for='(card, i) in $store.getters["aboutasp/about"]'
       :card='card',
@@ -92,6 +96,21 @@ h2
     margin 10px 0
   .student-leader
     font-size 18px
+
+
+
+.title-box
+  width 100%
+  margin calc(var(--static100vh-without-menubar) / 3) 0 20px
+  display flex
+  flex-direction column
+  justify-content center
+  align-items center
+  h1
+    font-size 20px
+  img
+    width 100%
+    height auto
 </style>
 
 

@@ -1,5 +1,5 @@
 <template lang="pug">
-  page-wrapper(:pageTitle='"つかいかた"')
+  page-wrapper
     description-card(
       v-for='(card, i) in $store.getters["aboutasp/top"]'
       :card='card'
