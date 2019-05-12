@@ -24,6 +24,7 @@
 #bottom-menu__wrapper
   width 100%
   height var(--height-bottom-menu)
+  border-top 3px var(--color-lightbrown) solid
   display flex
   justify-content center
   position fixed

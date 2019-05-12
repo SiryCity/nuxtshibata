@@ -4,6 +4,7 @@ module.exports = {
     "leaflet/dist/leaflet.css",
   ],
   plugins: [
+    '~/plugins/vue-scrollto',
     {
       src: "~/plugins/leaflet",
       ssr: false

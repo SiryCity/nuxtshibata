@@ -21,6 +21,7 @@
     "reset-css": "^4.0.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
+    "vue-scrollto": "^2.15.0",
     "vue2-leaflet": "^2.0.2"
   },
   "devDependencies": {

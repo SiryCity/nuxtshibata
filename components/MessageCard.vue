@@ -39,7 +39,6 @@ export default {
   img
     width 110px
     height auto
-    margin-bottom 10px
   span
     text-align left
     line-height 200%

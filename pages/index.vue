@@ -12,11 +12,9 @@
           | げんざい 
           span {{$store.state.saveData.pts}}
           |  ポイント
-        a(href='#') ポイントをためるには??
+        nuxt-link(v-scroll-to="'#anchor'" to) ポイントをためるには??
 
     //- スタンプとQRコードへのリンクのボックス
-
-
 
     message-card(
       v-for='(card, i) in $store.getters["aboutasp/top"]'
@@ -26,9 +24,8 @@
     )
 
       //- あんまり良くない書き方
-      div.message-box(v-if='i === 2')
-        a(href='#') ちずをひらく
-
+      div#anchor.message-box(v-if='i === 2')
+        nuxt-link(:to='{name: "map"}') ちずをひらく
 
       div.message-box(v-if='i === 3')
         nuxt-link(:to='{name: "stamp"}') スタンプをだす
@@ -36,20 +33,17 @@
       div.message-box(v-if='i === 4')
         nuxt-link(:to='{name: "camera"}') QRコードをさつえい
 
-
       div.message-box(v-if='i === 5')
-        a(href='#') ちずでかくにん
+        nuxt-link(:to='{name: "map"}') ちずでかくにん
 
 </template>
 
 <script>
 import AppWrapper from '~/components/AppWrapper.vue'
-import PageWrapper from '~/components/PageWrapper.vue'
 import MessageCard from '~/components/MessageCard.vue'
 export default {
   components:{
     AppWrapper,
-    PageWrapper,
     MessageCard,
   }
 }
