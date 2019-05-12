@@ -9,19 +9,14 @@
 
     div.message-box
         p.message-box__points
+          | げんざい 
           span {{$store.state.saveData.pts}}
-          | ポイント
-        a.messag-box__links--small(href='#')
-          div.messag-box__links ポイントをためるには??
+          |  ポイント
+        a(href='#') ポイントをためるには??
 
-    -// スタンプとQRコードへのリンクのボックス
-    div.message-box
-      nuxt-link(:to='{name: "stamp"}')
-        img(src='~/assets/menu-icon-stamp.svg')
-        div.messag-box__links スタンプ
-      nuxt-link(:to='{name: "camera"}')
-        img(src='~/assets/menu-icon-camera.svg')
-        div.messag-box__links QRコード
+    //- スタンプとQRコードへのリンクのボックス
+
+
 
     message-card(
       v-for='(card, i) in $store.getters["aboutasp/top"]'
@@ -29,6 +24,21 @@
       :key='`description-card-top-${i}`'
       :propKey='`description-card-top-${i}`'
     )
+
+      //- あんまり良くない書き方
+      div.message-box(v-if='i === 2')
+        a(href='#') ちずをひらく
+
+
+      div.message-box(v-if='i === 3')
+        nuxt-link(:to='{name: "stamp"}') スタンプをだす
+
+      div.message-box(v-if='i === 4')
+        nuxt-link(:to='{name: "camera"}') QRコードをさつえい
+
+
+      div.message-box(v-if='i === 5')
+        a(href='#') ちずでかくにん
 
 </template>
 
@@ -94,7 +104,6 @@ export default {
 .message-box
   width calc(100% - 20px)
   padding 10px
-  margin 10px 0
   background-color var(--color-brown)
   border-radius 7px
   display flex
@@ -106,9 +115,12 @@ export default {
     line-height 130%
 
   a
-    width calc(50% - 10px)
-    height 58px
-    border 2px var(--color-darkbrown) dashed
+    width 200px
+    margin 5px 0 0 calc(100% - 200px)
+    height 25px
+    line-height 100%
+    font-size 12px
+    border 1.5px var(--color-darkbrown) solid
     border-radius 7px
     text-align center
     color var(--color-darkbrown)
@@ -117,23 +129,14 @@ export default {
     flex-direction column
     justify-content space-evenly
     align-items center
-    img
-      width 30px
-      height 30px
-    .messag-box__links
-      height 10px
-      font-size 12px
-  .messag-box__links--small
-    width 100%
-    height 25px
+    
   .message-box__points
     width 100%
     text-align center
-    margin 10px 0
+    margin 20px 0 15px
     span
       font-size 40px
       font-weight normal
-      margin-right 3px 
 
 
 </style>

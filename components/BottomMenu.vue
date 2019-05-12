@@ -34,7 +34,7 @@
     width 100%
     margin-top 5px
     height calc(100% - 5px)
-    border-top 2px var(--color-lightgreen) dashed
+    border-top 1.5px var(--color-lightgreen) solid
     display flex
     align-content space-evenly
     justify-content center

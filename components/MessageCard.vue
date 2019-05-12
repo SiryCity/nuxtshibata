@@ -9,7 +9,8 @@ div.description-card
       :key='`${propKey}-${i}`'
     )
     span(v-if='card.mes') {{card.mes}}
-
+    slot
+    
 </template>
 
 <script>
@@ -32,13 +33,13 @@ export default {
   flex-direction column
   align-items center
   padding 10px
-  margin 70px 0
+  margin 30px 0
   background-color var(--color-brown)
   border-radius 7px
   img
     width 110px
     height auto
-    margin-bottom -10px
+    margin-bottom 10px
   span
     text-align left
     line-height 200%
