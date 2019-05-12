@@ -1,36 +1,34 @@
 
 <template lang="pug">
 app-wrapper
-  p.camera__message QRコードをみつけたら
-  br
-  | さつえいしてポイントゲット!
+  p.app__message QRコードをみつけたら
+  p.app__message さつえいしてポイントゲット!
   
-  div.cameraarea__wrappper
+  div.app__cameraarea__wrappper
 
     //- 最初の画面
-    div.cameraarea(
-      :class='{"cameraarea--hidden": $store.state.saveData.display !== "initial"}'
+    div.app__cameraarea(
+      :class='{"app__cameraarea--hidden": $store.state.saveData.display !== "initial"}'
       @touchstart='checkCameraPermission'
     )
       img(src='~/assets/menu-icon-camera.svg')
-      p.camera__message カメラをきどう
+      p.app__message カメラをきどう
 
     //- 撮影中
-    video.cameraarea.cameraarea--hidden#video(autoplay='')
+    video.app__cameraarea.app__cameraarea--hidden#video(autoplay='')
 
-    canvas.cameraarea#canvas(
-      :class='{"cameraarea--hidden": $store.state.saveData.display !== "video"}'
+    canvas.app__cameraarea#canvas(
+      :class='{"app__cameraarea--hidden": $store.state.saveData.display !== "video"}'
     )
 
     //- 拒否された時
-    div.cameraarea(
-      :class='{"cameraarea--hidden": $store.state.saveData.display !== "reject"}'
+    div.app__cameraarea(
+      :class='{"app__cameraarea--hidden": $store.state.saveData.display !== "reject"}'
       @touchstart='checkCameraPermission'
     )
       img(src='~/assets/menu-icon-camera.svg')
-      p.camera__message せっていから
-      br
-      | カメラをきょかしてね!
+      p.app__message スマホのせっていから
+      p.app__message さつえいをきょかしてね!
 
 </template>
 
@@ -52,7 +50,7 @@ export default {
   width 100%
   height 100%
   border unset
-.cameraarea__wrappper
+.app__cameraarea__wrappper
   width 90vw
   height 90vw
   max-width 540px
@@ -60,9 +58,9 @@ export default {
   background-color var(--color-brown)
   border-radius 10px
   margin 10px 0
-  line-height 90%
+  
   position relative
-.cameraarea
+.app__cameraarea
   width calc(100% - 20px)
   height calc(100% - 20px)
   text-align center
@@ -87,10 +85,14 @@ export default {
     height 30%
     margin-bottom 15px
 
-.camera__message
-  line-height 90%
+.app__message
+  width 100%
+  height 25px
+  display inline-block
+  text-align center
+  line-height 25px
 
-.cameraarea--hidden
+.app__cameraarea--hidden
   visibility hidden
   pointer-events none
 </style>

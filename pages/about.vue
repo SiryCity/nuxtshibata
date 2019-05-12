@@ -1,10 +1,10 @@
 <template lang="pug">
-  page-wrapper(:pageTitle='"このアプリについて"')
+  page-wrapper(pageTitle='このアプリについて')
     div.title-box
-      img(src='~/assets/shibata_logo_green.svg' :alt='"このアプリについて"')
+      img(src='~/assets/shibata_logo_green.svg' alt='このアプリについて')
       h1 このアプリについて
 
-    description-card(
+    message-card(
       v-for='(card, i) in $store.getters["aboutasp/about"]'
       :card='card',
       :key='`description-card-about-${i}`'
@@ -62,11 +62,11 @@
 
 <script>
 import PageWrapper from '~/components/PageWrapper.vue'
-import DescriptionCard from '~/components/DescriptionCard.vue'
+import MessageCard from '~/components/MessageCard.vue'
 export default {
   components:{
     PageWrapper,
-    DescriptionCard,
+    MessageCard,
   }
 }
 </script>

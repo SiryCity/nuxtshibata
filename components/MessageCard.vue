@@ -27,12 +27,14 @@ export default {
 
 <style lang="stylus" scoped>
 .description-card
-  width 100%
-  min-height 200px
+  width calc(100% - 20px)
   display flex
   flex-direction column
   align-items center
+  padding 10px
   margin 70px 0
+  background-color var(--color-brown)
+  border-radius 7px
   img
     width 110px
     height auto

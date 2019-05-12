@@ -1,20 +1,17 @@
 <template lang="pug">
   div#root(:class='{"root--loaded": $store.state.mounted.isLoaded}')
     nuxt
-    point-area
-    menu-bar
+    bottom-menu
     description-window
 </template>
 
 <script>
 
-import PointArea from '~/components/PointArea.vue'
-import MenuBar from '~/components/MenuBar.vue'
+import BottomMenu from '~/components/BottomMenu.vue'
 import DescriptionWindow from '~/components/DescriptionWindow.vue'
 export default {
   components:{
-    PointArea,
-    MenuBar,
+    BottomMenu,
     DescriptionWindow
   },
   mounted(){
@@ -32,8 +29,8 @@ export default {
 
 :root
   --static100vh 100vh
-  --height-menubar 65px
-  --static100vh-without-menubar calc(var(--static100vh) - var(--height-menubar))
+  --height-bottom-menu 65px
+  --static100vh-without-menubar calc(var(--static100vh) - var(--height-bottom-menu))
 
   --color-darkblue #00175A
   --color-white #eee
@@ -74,7 +71,6 @@ body
   min-height var(--static100vh)
   display flex
   justify-content center
-  position relative
   overflow hidden
   visibility hidden
   opacity 0

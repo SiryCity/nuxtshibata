@@ -28,14 +28,14 @@
 <style lang="stylus">
 .leaflet__wrapper
   width 100vw
-  height calc(100% - var(--height-menubar))
+  height calc(100% - var(--height-bottom-menu))
   position fixed
   top 0
   left 0
 
   .mini-map
     width 100%
-    height calc(var(--static100vh, 100vh) - var(--height-menubar))
+    height calc(var(--static100vh, 100vh) - var(--height-bottom-menu))
 
     .leaflet-interactive
       stroke var(--color-darkbrown)

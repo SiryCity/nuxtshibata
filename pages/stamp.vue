@@ -1,17 +1,15 @@
 <template lang="pug">
 app-wrapper
-  p.stamp__message お店でお買い物をしたら
-  br
-  | この画面をみせてね!
-  div.stamparea__wrappper
-    div.stamparea(
+  p.app__message お店でお買い物をしたら
+  p.app__message この画面をみせてね!
+  div.app__stamparea__wrappper
+    div.app__stamparea(
       @touchstart='pressTheStamp'
       @touchend='pressTheStamp'
     )
       img(src='~/assets/menu-icon-stamp.svg')
-      p.stamp__message ここにスタンプを
-      br
-      | おしてもらう
+      p.app__message ここにスタンプを
+      p.app__message おしてもらう
 
 </template>
 
@@ -29,7 +27,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.stamparea__wrappper
+.app__stamparea__wrappper
   width 90vw
   height 90vw
   max-width 540px
@@ -37,8 +35,7 @@ export default {
   background-color var(--color-brown)
   border-radius 10px
   margin 10px 0
-  line-height 90%
-.stamparea
+.app__stamparea
   width calc(100% - 20px)
   height calc(100% - 20px)
   margin 10px
@@ -58,8 +55,13 @@ export default {
     height 30%
     margin-bottom 15px
 
-.stamp__message
-  line-height 90%
+.app__message
+  width 100%
+  height 25px
+  display inline-block
+  text-align center
+  line-height 25px
+
 </style>
 
 

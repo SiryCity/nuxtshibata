@@ -1,7 +1,7 @@
 
 <template lang="pug">
-   nav#menubar__wrapper
-     div#menubar
+   nav#bottom-menu__wrapper
+     div#bottom-menu
       nuxt-link(:to='{name: "index"}')
         img(src='~/assets/menu-icon-home.svg')
         p ホーム
@@ -11,7 +11,7 @@
       nuxt-link(:to='{name: "stamp"}')
         img(src='~/assets/menu-icon-stamp.svg')
         p スタンプ
-      nuxt-link(:to='{name: "qr"}')
+      nuxt-link(:to='{name: "camera"}')
         img(src='~/assets/menu-icon-camera.svg')
         p QRコード
       nuxt-link(:to='{name: "about"}')
@@ -21,16 +21,16 @@
 
 
 <style lang="stylus" scoped>
-#menubar__wrapper
+#bottom-menu__wrapper
   width 100%
-  height var(--height-menubar)
+  height var(--height-bottom-menu)
   display flex
   justify-content center
   position fixed
   bottom 0
   box-sizing border-box
   background-color var(--color-brown)
-  #menubar
+  #bottom-menu
     width 100%
     margin-top 5px
     height calc(100% - 5px)
