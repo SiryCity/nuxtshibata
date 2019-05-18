@@ -1,10 +1,9 @@
 <template lang="pug">
   app-wrapper
 
-    div.app__firstviewarea__wrappper
-      div.app__firstviewarea
-        img(src='~/assets/shibata_logo_green.svg' alt='このアプリについて')
-        p.app__message このアプリについて
+    div.app__firstviewarea
+      img(src='~/assets/shibata_logo_green.svg' alt='このアプリについて')
+      p.app__message このアプリについて
 
     message-card(
       v-for='(card, i) in $store.getters["aboutasp/about"]'
@@ -75,29 +74,22 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.app__firstviewarea__wrappper
-  width 90vw
-  height 90vw
-  max-width 540px
-  max-height 540px
-  background-color var(--color-brown)
-  border-radius 10px
-  margin 60px 0 10px
 .app__firstviewarea
-  width calc(100% - 20px)
-  height calc(100% - 20px)
-  margin 10px
-  text-align center
-  font-size 120%
+  width calc(90vw - 30px)
+  height calc(90vw - 30px)
+  max-width 520px
+  max-height 520px
+  background-color var(--color-brown)
+  margin 70px 0 30px
+  border 4px var(--color-lightgreen) dashed
+  border-radius 7px
+  box-shadow 0 0 0 10px var(--color-brown)
 
-  box-sizing border-box
-  background-size 16px 48px
   display flex
   flex-direction column
   justify-content center
-  align-items center
-  border 4px var(--color-lightgreen) dashed
-  border-radius 7px
+  font-size 120%
+  text-align center
   img
     width 100%
     height 40%
