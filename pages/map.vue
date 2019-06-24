@@ -31,7 +31,7 @@
 <style lang="stylus">
 .leaflet__wrapper
   width 100vw
-  height calc(100% - var(--height-bottom-menu))
+  height 100%
   position fixed
   top 0
   left 0
