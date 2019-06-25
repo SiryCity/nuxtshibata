@@ -10,6 +10,9 @@ module.exports = {
       ssr: false
     }
   ],
+  modules: [
+    ['@nuxtjs/sitemap'],
+  ],
   /*
   ** Headers of the page
   */
