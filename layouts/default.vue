@@ -20,6 +20,7 @@ export default {
     this.$store.dispatch('camera/returnDisplay')
     document.addEventListener('visibilitychange', () => {
       this.$store.commit('stamp/resetChallenges')
+      this.$store.dispatch('mounted/setStatic100vh')
     })
   }
 }
