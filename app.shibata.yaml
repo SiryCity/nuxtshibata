@@ -1,4 +1,4 @@
-service: shibata
+service: default
 runtime: nodejs12
 
 instance_class: F1
@@ -13,5 +13,5 @@ handlers:
     secure: always
 
 env_variables:
-  NUXT_HOST: '0.0.0.0'
-  NUXT_PORT: '8080'
+  NUXT_HOST: "0.0.0.0"
+  NUXT_PORT: "8080"
