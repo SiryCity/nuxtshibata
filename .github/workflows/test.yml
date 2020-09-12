@@ -23,11 +23,11 @@ jobs:
       - name: login to gcloud
         uses: GoogleCloudPlatform/github-actions/setup-gcloud@master
         with:
-          version: '281.0.0'
+          version: "281.0.0"
           service_account_email: ${{ secrets.GCP_SA_EMAIL }}
           service_account_key: ${{ secrets.GCP_SA_KEY }}
           export_default_credentials: true
       - name: set project
-        run: gcloud config set project map9-buzzmap
+        run: gcloud config set project sasp-2019
       - name: deploy to gae
         run: gcloud --quiet app deploy app.shibata.yaml
